@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
+import Login from './pages/Login';
 
 interface Props { }
 
@@ -10,7 +10,7 @@ const Routes: React.FC<Props> = (props) => {
     <Route>
       <Switch>
         <Route>
-          <Route component={Home} exact path="/" />
+          <Route component={Login} exact path="/login" />
         </Route>
       </Switch>
     </Route>
