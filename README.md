@@ -6,7 +6,7 @@
 
 ## Features
 
-- [ ] Log Into CloneBnb
+- [X] Log Into CloneBnb
 - [ ] Sign up for an account for CloneBnb
 - [ ] Post Listings/Properties
 - [ ] Search for Listings/Properties 

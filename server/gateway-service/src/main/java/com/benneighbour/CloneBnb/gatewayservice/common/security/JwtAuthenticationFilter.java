@@ -25,8 +25,7 @@ import java.util.stream.Collectors;
  */
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-  @Autowired
-  private JwtAuthenticationConfig config;
+  @Autowired private JwtAuthenticationConfig config;
 
   public JwtAuthenticationFilter() {}
 
@@ -63,7 +62,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                       .map(SimpleGrantedAuthority::new)
                       .collect(Collectors.toList()));
 
-          authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
+          authenticationToken.setDetails(
+              new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
           SecurityContextHolder.getContext().setAuthentication(authenticationToken);
         }
       }

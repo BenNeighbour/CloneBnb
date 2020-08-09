@@ -31,5 +31,4 @@ public class LoginResponse {
   public void setMESSAGE(String MESSAGE) {
     this.MESSAGE = MESSAGE;
   }
-
 }
