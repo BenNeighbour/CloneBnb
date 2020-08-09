@@ -16,7 +16,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>authentication-service</module>
         <module>gateway-service</module>
         <module>discovery-service</module>
         <module>listing-service</module>

@@ -7,7 +7,6 @@
 ## Features
 
 - [ ] Log Into CloneBnb
-- [ ] Confirm Email Address
 - [ ] Sign up for an account for CloneBnb
 - [ ] Post Listings/Properties
 - [ ] Search for Listings/Properties 

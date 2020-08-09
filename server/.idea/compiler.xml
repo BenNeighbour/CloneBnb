@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gateway-service" />
         <module name="listing-service" />
-        <module name="authentication-service" />
         <module name="discovery-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="authentication-service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
