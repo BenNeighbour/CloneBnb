@@ -5,7 +5,10 @@ import com.benneighbour.CloneBnb.gatewayservice.model.User;
 import com.benneighbour.CloneBnb.gatewayservice.model.role.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -33,10 +36,5 @@ public class UserController {
     user.getRole().add(role);
 
     return userDao.save(user);
-  }
-
-  @GetMapping("must/auth/")
-  public String mustBeAuthed() {
-    return "yup";
   }
 }
