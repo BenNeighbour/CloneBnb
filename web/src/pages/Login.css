@@ -1,0 +1,21 @@
+.loginSection {
+  border-radius: 12px ;
+  border-top-left-radius: 12px ;
+  border-top-right-radius: 12px ;
+  border-bottom-right-radius: 12px ;
+  border-bottom-left-radius: 12px ;
+
+  border: 1px solid #b0b0b0 ;
+  border-top-color: rgb(176, 176, 176) ;
+  border-top-style: solid ;
+  border-top-width: 1px ;
+  border-right-color: rgb(176, 176, 176) ;
+  border-right-style: solid ;
+  border-right-width: 1px ;
+  border-bottom-color: rgb(176, 176, 176) ;
+  border-bottom-style: solid ;
+  border-bottom-width: 1px ;
+  border-left-color: rgb(176, 176, 176) ;
+  border-left-style: solid ;
+  border-left-width: 1px ;
+}

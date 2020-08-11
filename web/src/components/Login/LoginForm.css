@@ -1,0 +1,19 @@
+.continue-button {
+  background: linear-gradient(
+    to right,
+    #e61e4d 0%,
+    #e31c5f 50%,
+    #d70466 100%
+  );
+  touch-action: manipulation;
+  transition: box-shadow 0.2s ease, -ms-transform 0.1s ease,
+    -webkit-transform 0.1s ease, transform 0.1s ease;
+  outline: none;
+  border-radius: 20px;
+  height: 5.3vh;
+}
+
+.continue-label {
+  background-position: calc((100 - var(--mouse-x, 0)) * 1%)
+    calc((100 - var(--mouse-y, 0)) * 1%);
+}
