@@ -1,7 +1,8 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { Formik } from "formik";
-import { Button, TextField } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 import "./LoginForm.css";
 
 interface FormValues {
@@ -20,7 +21,7 @@ const LoginForm: React.FC<Props> = (props) => {
       style={{
         width: "87%",
         display: "inline-block",
-        textAlign: "center"
+        textAlign: "center",
       }}
     >
       {/* Do some Formik stuff */}
