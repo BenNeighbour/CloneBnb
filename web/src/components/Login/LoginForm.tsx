@@ -18,10 +18,9 @@ const LoginForm: React.FC<Props> = (props) => {
   return (
     <div
       style={{
-        display: "grid",
         width: "87%",
-        placeItems: "center",
-        textAlign: "center",
+        display: "inline-block",
+        textAlign: "center"
       }}
     >
       {/* Do some Formik stuff */}
@@ -32,25 +31,36 @@ const LoginForm: React.FC<Props> = (props) => {
         initialValues={{ username: "", password: "" }}
       >
         {({ values, handleChange }) => (
-          <div>
-            <TextField
-              fullWidth
-              value={values.username}
-              variant="outlined"
-              onChange={handleChange}
-              type="text"
-              name="username"
-              label="Username"
-            />
-            <TextField
-              fullWidth
-              value={values.password}
-              variant="outlined"
-              onChange={handleChange}
-              type="password"
-              name="password"
-              label="Password"
-            />
+          <div
+            style={{
+              display: "inline-block",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                paddingBottom: "3vh",
+              }}
+            >
+              <TextField
+                fullWidth
+                value={values.username}
+                variant="outlined"
+                onChange={handleChange}
+                type="text"
+                name="username"
+                label="Username"
+              />
+              <TextField
+                fullWidth
+                value={values.password}
+                variant="outlined"
+                onChange={handleChange}
+                type="password"
+                name="password"
+                label="Password"
+              />
+            </div>
 
             <Button
               className="continue-button"
@@ -61,7 +71,9 @@ const LoginForm: React.FC<Props> = (props) => {
               color="primary"
               variant="contained"
             >
-              <span className="continue-label"><b>Continue</b></span>
+              <span className="continue-label">
+                <b>Continue</b>
+              </span>
             </Button>
           </div>
         )}
