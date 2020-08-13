@@ -20,7 +20,13 @@ import java.util.Optional;
 @Service
 public class SecurityUserService implements UserDetailsService {
 
-  @Autowired private UserDao dao;
+//  @Autowired private UserDao dao;
+
+  private final UserDao dao;
+
+  public SecurityUserService(UserDao dao) {
+    this.dao = dao;
+  }
 
   @Override
   public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
