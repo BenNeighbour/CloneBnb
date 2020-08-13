@@ -2,10 +2,10 @@ import Divider from "@material-ui/core/Divider";
 import Paper from "@material-ui/core/Paper";
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import LoginForm from "./../components/Login/LoginForm";
+import LoginForm from "./../../components/Login/LoginForm";
 import "./Login.css";
-import Navigation from "./../components/Navigation/Navigation";
-import { USER_LOGIN } from '../util/api/AJAX';
+import Navigation from "./../../components/Navigation/Navigation";
+import { USER_LOGIN } from '../../util/api/AJAX';
 
 interface Props extends RouteComponentProps<any> {}
 
@@ -19,6 +19,7 @@ const Login: React.FC<Props> = (props) => {
       }}
     >
       <Navigation
+        isSearchNavbar={false}
         history={props.history}
         match={props.match}
         location={props.location}
@@ -68,8 +69,6 @@ const Login: React.FC<Props> = (props) => {
               
                   if (response.status === 200) {
                     localStorage.setItem("authenticated", "true");
-
-                    // Then redirect to the home page
                     props.history.push("/home");
                   }
                 } catch (err) {
