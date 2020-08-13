@@ -5,17 +5,19 @@ import { RouteComponentProps } from "react-router-dom";
 import LoginForm from "./../components/Login/LoginForm";
 import "./Login.css";
 import Navigation from "./../components/Navigation/Navigation";
+import { USER_LOGIN } from '../util/api/AJAX';
 
 interface Props extends RouteComponentProps<any> {}
 
 const Login: React.FC<Props> = (props) => {
+  const [errors, setErrors] = React.useState("");
+
   return (
     <div
       style={{
         height: "100%",
       }}
     >
-      {/* Navbar Here */}
       <Navigation
         history={props.history}
         match={props.match}
@@ -56,13 +58,26 @@ const Login: React.FC<Props> = (props) => {
             <br />
             <br />
 
-            {/* Login Form Here */}
             <LoginForm
               location={props.location}
               history={props.history}
               match={props.match}
-              onSubmit={() => {}}
-              errors={""}
+              onSubmit={async (vals) => {
+                try {
+                  const response = await USER_LOGIN(vals);
+              
+                  if (response.status === 200) {
+                    localStorage.setItem("authenticated", "true");
+
+                    // Then redirect to the home page
+                    props.history.push("/home");
+                  }
+                } catch (err) {
+                  if (err.response !== undefined && err.response.status === 401) return setErrors("Bad Credentials");
+                  else return setErrors("Internal Server Error");
+                }
+              }}
+              errors={errors}
             />
           </div>
         </Paper>

@@ -1,0 +1,1 @@
+export const SERVER_BASE_ROUTE = `http://localhost:8080`;
