@@ -44,7 +44,7 @@ const HomeTopBanner: React.FC<Props> = (props) => {
             }}
           >
             {/* Material Standard Inuput field */}
-            <TextField fullWidth color={undefined} label="Location" />
+            <TextField fullWidth color={undefined} focused label="Location" />
           </div>
 
           <div
@@ -55,7 +55,7 @@ const HomeTopBanner: React.FC<Props> = (props) => {
             }}
           >
             {/* TODO: Create a datepicker here! */}
-            <TextField fullWidth label="Check in" />
+            <TextField fullWidth focused label="Check in" />
           </div>
 
           <div
@@ -66,7 +66,7 @@ const HomeTopBanner: React.FC<Props> = (props) => {
             }}
           >
             {/* TODO: Create a datepicker here! */}
-            <TextField fullWidth label="Check out" />
+            <TextField fullWidth focused label="Check out" />
           </div>
 
           <div
@@ -83,7 +83,7 @@ const HomeTopBanner: React.FC<Props> = (props) => {
                 padding: "6px",
                 marginLeft: "auto",
                 boxShadow: "none",
-                textTransform: "none",
+                textTransform: "none"
               }}
               color="primary"
               variant="contained"
