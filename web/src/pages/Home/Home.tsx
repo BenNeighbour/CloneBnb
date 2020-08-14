@@ -2,6 +2,7 @@ import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
 import Navigation from "./../../components/Navigation/Navigation";
 import "./Home.css";
+import HomeTopBanner from "./../../components/Home/HomeTopBanner";
 
 interface Props extends RouteComponentProps<any> {}
 
@@ -9,7 +10,9 @@ const Home: React.FC<Props> = (props) => {
   return (
     <div
       style={{
-        height: "100%",
+        height: "100vh",
+        width: "100vw",
+        display: "grid"
       }}
     >
       <Navigation
@@ -18,15 +21,15 @@ const Home: React.FC<Props> = (props) => {
         match={props.match}
         location={props.location}
       />
-
-      <div
-        style={{
-          display: "grid",
-          placeItems: "center",
-          height: "100vh",
-        }}
-      >
-        Hello from Home!
+      <div style={{
+        paddingTop: "10vh",
+        textAlign: "center"
+      }}>
+        <HomeTopBanner
+          location={props.location}
+          match={props.match}
+          history={props.history}
+        />
       </div>
     </div>
   );

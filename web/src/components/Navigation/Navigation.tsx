@@ -46,7 +46,6 @@ const Navigation: React.FC<Props> = (props) => {
           >
             <b>CloneBnb</b>
           </h3>
-
           <Button
             style={{
               float: "right",
