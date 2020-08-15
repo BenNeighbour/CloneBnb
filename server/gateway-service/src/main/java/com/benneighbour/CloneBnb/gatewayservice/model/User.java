@@ -1,5 +1,6 @@
 package com.benneighbour.CloneBnb.gatewayservice.model;
 
+import com.benneighbour.CloneBnb.gatewayservice.common.model.Stay;
 import com.benneighbour.CloneBnb.gatewayservice.model.role.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -9,6 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -21,7 +23,9 @@ import java.util.UUID;
 @Entity
 @Table(name = "user_account")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class User {
+public class User implements Serializable {
+
+  private static final long serialVersionUID = 6642429033663680780L;
 
   @Id
   @GeneratedValue
@@ -49,6 +53,8 @@ public class User {
   @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = Role.class)
   @JsonIgnore
   private List<Role> role;
+
+  @Transient private List<Stay> stays;
 
   @Column(name = "enabled")
   @JsonIgnore
@@ -183,5 +189,13 @@ public class User {
 
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
+  }
+
+  public List<Stay> getStays() {
+    return stays;
+  }
+
+  public void setStays(List<Stay> stays) {
+    this.stays = stays;
   }
 }
