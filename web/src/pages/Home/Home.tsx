@@ -10,9 +10,9 @@ const Home: React.FC<Props> = (props) => {
   return (
     <div
       style={{
+        width: "100%",
         height: "100vh",
-        width: "100vw",
-        display: "grid"
+        display: "grid",
       }}
     >
       <Navigation
@@ -21,15 +21,23 @@ const Home: React.FC<Props> = (props) => {
         match={props.match}
         location={props.location}
       />
-      <div style={{
-        paddingTop: "10vh",
-        textAlign: "center"
-      }}>
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
         <HomeTopBanner
           location={props.location}
           match={props.match}
           history={props.history}
         />
+        <div>
+          next section
+          <br />
+          <br />
+          <br />
+          fdsf
+        </div>
       </div>
     </div>
   );

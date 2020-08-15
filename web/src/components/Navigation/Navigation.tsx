@@ -10,12 +10,15 @@ interface Props extends RouteComponentProps<any> {
 }
 
 const Navigation: React.FC<Props> = (props) => {
+  const [isOnTop, setIsOnTop] = React.useState(props.isSearchNavbar);
+
   return (
     <AppBar
-      className="navbar"
+      className={!isOnTop ? "navbar" : ""}
       elevation={0}
       style={{
-        backgroundColor: "white",
+        backgroundColor: isOnTop ? "transparent" : "white",
+        color: isOnTop ? "transparent" : "white",
         marginBottom: "1vh"
       }}
     >
@@ -37,7 +40,7 @@ const Navigation: React.FC<Props> = (props) => {
         >
           <h3
             style={{
-              color: "#FF385C",
+              color: !isOnTop ? "#FF385C" : "white",
               fontSize: "150%",
               float: "left",
               marginTop: "20px",
@@ -48,6 +51,7 @@ const Navigation: React.FC<Props> = (props) => {
           </h3>
           <Button
             style={{
+              borderColor: isOnTop ? "white" : "",
               float: "right",
               borderRadius: "60px",
               width: "min-content",
@@ -59,7 +63,9 @@ const Navigation: React.FC<Props> = (props) => {
             variant="outlined"
             className="profile-button"
           >
-            <PersonOutlineOutlinedIcon />
+            <PersonOutlineOutlinedIcon style={{
+              color: isOnTop ? "white" : "",
+            }} />
           </Button>
         </div>
       </div>
