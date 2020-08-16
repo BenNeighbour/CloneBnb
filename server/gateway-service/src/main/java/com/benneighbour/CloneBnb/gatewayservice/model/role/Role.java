@@ -1,6 +1,7 @@
 package com.benneighbour.CloneBnb.gatewayservice.model.role;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.UUID;
 
 /**
@@ -10,7 +11,9 @@ import java.util.UUID;
  */
 @Entity
 @Table(name = "role")
-public class Role {
+public class Role implements Serializable {
+
+  private static final long serialVersionUID = 3867303208658249742L;
 
   @Id
   @GeneratedValue(generator = "uuid2")

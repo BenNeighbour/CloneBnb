@@ -1,8 +1,10 @@
 package com.benneighbour.CloneBnb.listingservice.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -14,9 +16,17 @@ import java.util.UUID;
  */
 @Entity
 @Table(name = "Stay")
-public class Stay extends Listing implements Serializable {
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonSerialize(include= JsonSerialize.Inclusion.NON_EMPTY)
+public class Stay implements Serializable {
 
   private static final long serialVersionUID = 6245537566711698920L;
+
+  @Id
+  @GeneratedValue
+  @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+  @Column(columnDefinition = "uuid", updatable = false)
+  private UUID id;
 
   @Column(name = "checkInDate")
   private LocalDate checkInDate;
@@ -24,11 +34,15 @@ public class Stay extends Listing implements Serializable {
   @Column(name = "checkOutDate")
   private LocalDate checkOutDate;
 
+  @JsonProperty
   @Column(name = "finished")
-  private Boolean isFinished = false;
+  private boolean finished = false;
 
   @Column(name = "userId")
   private UUID userId;
+
+  @ManyToOne(cascade = CascadeType.ALL, targetEntity = Listing.class, fetch = FetchType.LAZY)
+  private Listing listing;
 
   public Stay() {}
 
@@ -48,19 +62,35 @@ public class Stay extends Listing implements Serializable {
     this.checkOutDate = checkOutDate;
   }
 
-  public Boolean getFinished() {
-    return isFinished;
-  }
-
-  public void setFinished(Boolean finished) {
-    isFinished = finished;
-  }
-
   public UUID getUserId() {
     return userId;
   }
 
   public void setUserId(UUID userId) {
     this.userId = userId;
+  }
+
+  public UUID getId() {
+    return id;
+  }
+
+  public void setId(UUID id) {
+    this.id = id;
+  }
+
+  public Listing getListing() {
+    return listing;
+  }
+
+  public void setListing(Listing listing) {
+    this.listing = listing;
+  }
+
+  public boolean isFinished() {
+    return finished;
+  }
+
+  public void setFinished(boolean finished) {
+    this.finished = finished;
   }
 }

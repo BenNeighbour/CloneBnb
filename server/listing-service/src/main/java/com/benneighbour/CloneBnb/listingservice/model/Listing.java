@@ -1,6 +1,7 @@
 package com.benneighbour.CloneBnb.listingservice.model;
 
-import com.benneighbour.CloneBnb.listingservice.common.model.User;
+import com.benneighbour.CloneBnb.listingservice.common.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -17,7 +18,6 @@ import java.util.UUID;
  */
 @Entity
 @Table(name = "listing")
-@Inheritance(strategy = InheritanceType.JOINED)
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Listing implements Serializable {
 
@@ -38,7 +38,14 @@ public class Listing implements Serializable {
   @Column(name = "address")
   private String address;
 
-  @Transient private List<Amenity> amenities;
+  @ElementCollection(fetch = FetchType.LAZY)
+  @JoinTable(name = "amenity", joinColumns = @JoinColumn(name = "listing_id"))
+  @Column(name = "amenity", nullable = false)
+  @Enumerated(EnumType.STRING)
+  private List<Amenity> amenities;
+
+//  @OneToMany(cascade = CascadeType.ALL, targetEntity = Stay.class, fetch = FetchType.LAZY)
+//  private List<Stay> stays;
 
   @Column(name = "type")
   private PropertyType type;
@@ -62,6 +69,10 @@ public class Listing implements Serializable {
   private Integer numberOfBathrooms;
 
   @Transient private User owner;
+
+  @JsonIgnore
+  @Column(name = "ownerId")
+  private UUID ownerId;
 
   @Column(name = "pricePerNight")
   private Double pricePerNight;
@@ -178,6 +189,14 @@ public class Listing implements Serializable {
 
   public void setPricePerNight(Double pricePerNight) {
     this.pricePerNight = pricePerNight;
+  }
+
+  public UUID getOwnerId() {
+    return ownerId;
+  }
+
+  public void setOwnerId(UUID ownerId) {
+    this.ownerId = ownerId;
   }
 
   enum PropertyType {
