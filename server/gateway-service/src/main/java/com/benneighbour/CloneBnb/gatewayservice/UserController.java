@@ -39,8 +39,9 @@ public class UserController {
     return userDao.save(user);
   }
 
-  @GetMapping("me/{id}")
+  @GetMapping("by/{id}")
   public User getUserById(@PathVariable("id") String id) throws Exception {
     return globalDao.getUserById(id);
   }
+
 }

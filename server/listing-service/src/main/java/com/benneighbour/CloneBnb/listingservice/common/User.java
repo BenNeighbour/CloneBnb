@@ -26,13 +26,11 @@ public class User implements Serializable {
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private String password;
 
-  @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private String phoneNumber;
 
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private Date dateOfBirth;
 
-  @JsonIgnore
   private List<Stay> stays;
 
   @JsonIgnore

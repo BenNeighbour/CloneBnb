@@ -42,7 +42,6 @@ public class User implements Serializable {
   @NotEmpty(message = "Please enter a password")
   private String password;
 
-  @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   @Column(name = "number")
   private String phoneNumber;
 
