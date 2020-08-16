@@ -1,14 +1,10 @@
 package com.benneighbour.CloneBnb.gatewayservice;
 
+import com.benneighbour.CloneBnb.gatewayservice.common.dao.GlobalDao;
 import com.benneighbour.CloneBnb.gatewayservice.dao.UserDao;
 import com.benneighbour.CloneBnb.gatewayservice.model.User;
 import com.benneighbour.CloneBnb.gatewayservice.model.role.Role;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -22,9 +18,14 @@ import java.util.ArrayList;
 @RequestMapping("/auth/")
 public class UserController {
 
-  @Autowired private UserDao userDao;
+  private final UserDao userDao;
 
-  @Autowired private PasswordEncoder encoder;
+  private final GlobalDao globalDao;
+
+  public UserController(final UserDao userDao, final GlobalDao globalDao) {
+    this.userDao = userDao;
+    this.globalDao = globalDao;
+  }
 
   @PostMapping("signup/")
   public User signup(@Valid @RequestBody User user) {
@@ -36,5 +37,10 @@ public class UserController {
     user.getRole().add(role);
 
     return userDao.save(user);
+  }
+
+  @GetMapping("me/{id}")
+  public User getUserById(@PathVariable("id") String id) throws Exception {
+    return globalDao.getUserById(id);
   }
 }
