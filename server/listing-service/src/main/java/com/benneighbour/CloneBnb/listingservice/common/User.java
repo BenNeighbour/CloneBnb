@@ -18,7 +18,6 @@ public class User implements Serializable {
 
   private static final long serialVersionUID = -2229916935310862092L;
 
-  @JsonProperty(access = JsonProperty.Access.READ_ONLY)
   private UUID id;
 
   private String username;
