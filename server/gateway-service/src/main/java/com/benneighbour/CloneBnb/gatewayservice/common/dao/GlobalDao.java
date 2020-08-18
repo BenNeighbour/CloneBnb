@@ -28,8 +28,8 @@ public class GlobalDao {
     this.userDao = userDao;
   }
 
-  public User getUserById(String id) throws Exception {
-    User user = userDao.findUserById(UUID.fromString(id));
+  public User getUserById(UUID id) throws Exception {
+    User user = userDao.findUserById(id);
 
     List<Stay> stays =
         Arrays.asList(

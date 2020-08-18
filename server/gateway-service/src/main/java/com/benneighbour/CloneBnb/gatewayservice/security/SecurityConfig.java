@@ -78,10 +78,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .authenticationEntryPoint(new AuthenticationEntryPoint())
         .and()
         .authorizeRequests()
-        .antMatchers("/auth/must/auth/")
-        .authenticated()
-        .anyRequest()
+        .antMatchers("/auth/signup/", "/auth/", "/listing/**", "/internal/**")
         .permitAll()
+        .anyRequest()
+        .authenticated()
         .and()
         .httpBasic()
         .disable();

@@ -18,7 +18,7 @@ import java.util.UUID;
  * @project CloneBnb
  */
 @RestController
-@RequestMapping("/listing/stay")
+@RequestMapping("/")
 public class StayController {
 
   private final StayDao dao;
@@ -28,13 +28,13 @@ public class StayController {
   }
 
   // Get a stay by it's id
-  @GetMapping("/by/{id}")
+  @GetMapping("listing/stay/by/{id}")
   public Stay findStayById(@PathVariable("id") UUID id) {
     return dao.findStayById(id);
   }
 
   // Get the user stays
-  @GetMapping("/by/user/{id}")
+  @GetMapping("listing/stay/by/user/{id}")
   public ResponseEntity<List<Stay>> getUserStays(@PathVariable("id") UUID id) {
     List<Stay> stays = dao.findAllStaysByUserId(id);
 

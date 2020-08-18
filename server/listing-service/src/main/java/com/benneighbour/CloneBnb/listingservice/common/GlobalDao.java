@@ -53,7 +53,7 @@ public class GlobalDao {
           // Get the user by the owner id field by making the cross-service call to gateway
           User owner =
               restTemplate.getForObject(
-                  "http://gateway-service/auth/by/" + listing.getOwnerId().toString(), User.class);
+                  "http://gateway-service/internal/by/" + listing.getOwnerId().toString(), User.class);
 
           listing.setOwner(owner);
         });
