@@ -11,9 +11,10 @@ public class LoginResponse {
 
   private String MESSAGE;
 
-  enum STATUS {
+  public enum STATUS {
     SUCCESS,
-    UNAUTHORIZED
+    UNAUTHORIZED,
+    INTERNAL_SERVER_ERROR
   }
 
   public LoginResponse.STATUS getSTATUS() {

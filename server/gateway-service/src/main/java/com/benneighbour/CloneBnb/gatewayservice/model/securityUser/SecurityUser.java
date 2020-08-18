@@ -6,6 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -16,9 +17,9 @@ import java.util.UUID;
  * @created 07/08/2020
  * @project CloneBnb
  */
-public class SecurityUser extends User implements UserDetails {
+public class SecurityUser extends User implements UserDetails, Serializable {
 
-  public SecurityUser() {}
+  private static final long serialVersionUID = 5891898031952644908L;
 
   public SecurityUser(User user) {
     super(user);

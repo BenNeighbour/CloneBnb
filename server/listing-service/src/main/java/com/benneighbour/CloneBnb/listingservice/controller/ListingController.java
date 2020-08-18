@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * @project CloneBnb
  */
 @RestController
-@RequestMapping("/listing")
+@RequestMapping("/")
 public class ListingController {
 
   private final GlobalDao dao;
@@ -28,12 +28,12 @@ public class ListingController {
     this.dao = dao;
   }
 
-  @GetMapping("/by/{id}")
+  @GetMapping("internal/by/{id}")
   public Listing findListingById(@PathVariable("id") UUID id) {
     return dao.getListingById(id);
   }
 
-  @GetMapping("/search")
+  @GetMapping("listing/search")
   public List<Listing> searchForListings(@RequestParam("query") String query) {
     ListingSpecificationBuilder builder = new ListingSpecificationBuilder();
 
