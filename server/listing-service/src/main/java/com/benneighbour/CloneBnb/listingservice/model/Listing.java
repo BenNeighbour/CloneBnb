@@ -57,7 +57,7 @@ public class Listing implements Serializable {
 
   @Transient private Integer averageStars;
 
-  @Transient private List<LocalDate> vacantDates;
+  @Transient private List<LocalDate> unvacantDates;
 
   @Column(name = "numberOfBedrooms")
   private Integer numberOfBedrooms;
@@ -143,12 +143,12 @@ public class Listing implements Serializable {
     this.averageStars = averageStars;
   }
 
-  public List<LocalDate> getVacantDates() {
-    return vacantDates;
+  public List<LocalDate> getUnvacantDates() {
+    return unvacantDates;
   }
 
-  public void setVacantDates(List<LocalDate> vacantDates) {
-    this.vacantDates = vacantDates;
+  public void setUnvacantDates(List<LocalDate> unvacantDates) {
+    this.unvacantDates = unvacantDates;
   }
 
   public Integer getNumberOfBedrooms() {

@@ -36,7 +36,7 @@ public class Listing implements Serializable {
 
   private Integer averageStars;
 
-  private List<LocalDate> vacantDates;
+  private List<LocalDate> unvacantDates;
 
   private Integer numberOfBedrooms;
 
@@ -115,12 +115,12 @@ public class Listing implements Serializable {
     this.averageStars = averageStars;
   }
 
-  public List<LocalDate> getVacantDates() {
-    return vacantDates;
+  public List<LocalDate> getUnvacantDates() {
+    return unvacantDates;
   }
 
-  public void setVacantDates(List<LocalDate> vacantDates) {
-    this.vacantDates = vacantDates;
+  public void setUnvacantDates(List<LocalDate> unvacantDates) {
+    this.unvacantDates = unvacantDates;
   }
 
   public Integer getNumberOfBedrooms() {

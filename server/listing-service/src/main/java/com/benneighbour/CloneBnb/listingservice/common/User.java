@@ -2,6 +2,7 @@ package com.benneighbour.CloneBnb.listingservice.common;
 
 import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
@@ -30,6 +31,7 @@ public class User implements Serializable {
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private Date dateOfBirth;
 
+  @JsonInclude(JsonInclude.Include.NON_NULL)
   private List<Stay> stays;
 
   @JsonIgnore

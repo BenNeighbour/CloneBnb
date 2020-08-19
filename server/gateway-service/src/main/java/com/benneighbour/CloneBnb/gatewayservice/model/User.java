@@ -4,6 +4,7 @@ import com.benneighbour.CloneBnb.gatewayservice.common.model.Stay;
 import com.benneighbour.CloneBnb.gatewayservice.model.role.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -53,7 +54,9 @@ public class User implements Serializable {
   @JsonIgnore
   private List<Role> role;
 
-  @Transient private List<Stay> stays;
+  @JsonInclude(JsonInclude.Include.NON_NULL)
+  @Transient
+  private List<Stay> stays;
 
   @Column(name = "enabled")
   @JsonIgnore
