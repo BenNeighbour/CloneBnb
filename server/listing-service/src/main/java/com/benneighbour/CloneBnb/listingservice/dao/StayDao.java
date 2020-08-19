@@ -1,5 +1,6 @@
 package com.benneighbour.CloneBnb.listingservice.dao;
 
+import com.benneighbour.CloneBnb.listingservice.model.Listing;
 import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

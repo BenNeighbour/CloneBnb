@@ -41,4 +41,8 @@ public class GlobalDao {
 
     return user;
   }
+
+  public User getOwnerById(UUID id) throws Exception {
+    return userDao.findUserById(id);
+  }
 }

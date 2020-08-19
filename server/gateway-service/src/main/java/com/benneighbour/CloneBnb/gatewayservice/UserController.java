@@ -56,9 +56,14 @@ public class UserController {
     return ResponseEntity.ok(globalDao.getUserById(user.getId()));
   }
 
-  @GetMapping("internal/by/{id}")
+  @GetMapping("internal/user/by/{id}")
   public User getUserById(@PathVariable("id") UUID id) throws Exception {
     return globalDao.getUserById(id);
+  }
+
+  @GetMapping("internal/owner/by/{id}")
+  public User getOwnerById(@PathVariable("id") UUID id) throws Exception {
+    return globalDao.getOwnerById(id);
   }
 
 }
