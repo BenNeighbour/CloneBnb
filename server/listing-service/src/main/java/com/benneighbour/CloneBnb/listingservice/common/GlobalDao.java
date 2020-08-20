@@ -84,16 +84,16 @@ public class GlobalDao {
         stay -> {
           // Get all of the dates between the check in and check out date
           long numberOfDaysBetween =
-              ChronoUnit.DAYS.between(stay.getCheckInDate(), stay.getCheckOutDate());
+              ChronoUnit.DAYS.between(stay.getCheckInDate(), stay.getCheckOutDate().plusDays(1));
 
           // For each of those dates, append them onto the available stays ArrayList<>()
           List<LocalDate> datesBetween =
-              IntStream.iterate(0, i -> i++)
+              IntStream.iterate(0, i -> i + 1)
                   .limit(numberOfDaysBetween)
                   .mapToObj(i -> stay.getCheckInDate().plusDays(i))
                   .collect(Collectors.toList());
 
-          listing.getUnvacantDates().addAll(datesBetween);
+                    listing.getUnvacantDates().addAll(datesBetween);
         });
   }
 }
