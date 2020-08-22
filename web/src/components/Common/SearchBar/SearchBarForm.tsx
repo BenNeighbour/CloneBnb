@@ -1,6 +1,6 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import { Formik } from "formik";
+import { Formik, Form } from "formik";
 import Button from "@material-ui/core/Button";
 import { KeyboardDatePicker } from "@material-ui/pickers";
 import TextField from "@material-ui/core/TextField";
@@ -29,7 +29,9 @@ const SearchBarForm: React.FC<Props> = (props) => {
       }}
     >
       {({ values, handleChange }) => (
-        <>
+        <Form style={{
+          display: "contents"
+        }}>
           <div
             style={{
               paddingTop: "0.5vh",
@@ -45,6 +47,7 @@ const SearchBarForm: React.FC<Props> = (props) => {
               fullWidth
               focused
               label="Location"
+              name="location"
             />
           </div>
 
@@ -65,6 +68,7 @@ const SearchBarForm: React.FC<Props> = (props) => {
               fullWidth
               format="dd/MM/yy"
               margin="none"
+              name="checkInDate"
               onChange={handleChange}
             />
           </div>
@@ -83,6 +87,7 @@ const SearchBarForm: React.FC<Props> = (props) => {
               value={values.checkOutDate}
               label="Check out"
               focused
+              name="checkOutDate"
               fullWidth
               format="dd/MM/yy"
               margin="none"
@@ -115,7 +120,7 @@ const SearchBarForm: React.FC<Props> = (props) => {
               Search
             </Button>
           </div>
-        </>
+        </Form>
       )}
     </Formik>
   );

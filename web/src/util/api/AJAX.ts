@@ -20,3 +20,10 @@ export function USER_LOGIN(formObject: any): any {
     extraRequestHeaders
   );
 }
+
+export function LISTING_SEARCH(params: Array<string>): any { 
+  return axios.get(
+    `${Constants.SERVER_BASE_ROUTE}/listing/search?query=${params[0]}&${params[1]}&${params[2]}`,
+    extraRequestHeaders
+  )
+}

@@ -9,8 +9,6 @@ import SearchBarForm from "./SearchBarForm";
 interface Props extends RouteComponentProps<any> {}
 
 const SearchBar: React.FC<Props> = (props) => {
-  const [errors, setErrors] = React.useState("");
-  
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <div
@@ -43,8 +41,17 @@ const SearchBar: React.FC<Props> = (props) => {
               location={props.location}
               history={props.history}
               match={props.match}
-              onSubmit={() => {
+              onSubmit={(values) => {
+                // Call helper function that formats the date with the hyphens instead of slashes
+                let checkInDate: string = formatDateToLocalDate(
+                  values.checkInDate
+                );
+                let checkOutDate: string = formatDateToLocalDate(
+                  values.checkOutDate
+                );
 
+                // Redirect to search route
+                props.history.push(`/search?location=${values.location}&checkIn=${checkInDate}&checkOut=${checkOutDate}`)
               }}
             />
           </CardContent>
@@ -53,5 +60,9 @@ const SearchBar: React.FC<Props> = (props) => {
     </MuiPickersUtilsProvider>
   );
 };
+
+function formatDateToLocalDate(input: Date): string {
+  return input.toISOString().split('T')[0]
+}
 
 export default SearchBar;

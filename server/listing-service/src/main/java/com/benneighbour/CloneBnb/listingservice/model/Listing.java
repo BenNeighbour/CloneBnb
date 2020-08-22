@@ -4,6 +4,7 @@ import com.benneighbour.CloneBnb.listingservice.common.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -18,6 +19,7 @@ import java.util.UUID;
  */
 @Entity
 @Table(name = "listing")
+@JsonSerialize(include= JsonSerialize.Inclusion.NON_EMPTY)
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Listing implements Serializable {
 
@@ -32,8 +34,8 @@ public class Listing implements Serializable {
   @Column(name = "name")
   private String name;
 
-  @Column(name = "city")
-  private String city;
+  @Column(name = "location")
+  private String location;
 
   @Column(name = "address")
   private String address;
@@ -44,8 +46,8 @@ public class Listing implements Serializable {
   @Enumerated(EnumType.STRING)
   private List<Amenity> amenities;
 
-//  @OneToMany(cascade = CascadeType.ALL, targetEntity = Stay.class, fetch = FetchType.LAZY)
-//  private List<Stay> stays;
+  //  @OneToMany(cascade = CascadeType.ALL, targetEntity = Stay.class, fetch = FetchType.LAZY)
+  //  private List<Stay> stays;
 
   @Column(name = "type")
   private PropertyType type;
@@ -95,12 +97,12 @@ public class Listing implements Serializable {
     this.name = name;
   }
 
-  public String getCity() {
-    return city;
+  public String getLocation() {
+    return location;
   }
 
-  public void setCity(String city) {
-    this.city = city;
+  public void setLocation(String location) {
+    this.location = location;
   }
 
   public String getAddress() {

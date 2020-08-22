@@ -2,6 +2,7 @@ package com.benneighbour.CloneBnb.gatewayservice.common.model;
 
 import com.benneighbour.CloneBnb.gatewayservice.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ import java.util.UUID;
  * @created 15/08/2020
  * @project CloneBnb
  */
+@JsonSerialize(include= JsonSerialize.Inclusion.NON_EMPTY)
 public class Listing implements Serializable {
 
   private static final long serialVersionUID = 8096657782794609195L;
@@ -22,7 +24,7 @@ public class Listing implements Serializable {
 
   private String name;
 
-  private String city;
+  private String location;
 
   private String address;
 
@@ -67,12 +69,12 @@ public class Listing implements Serializable {
     this.name = name;
   }
 
-  public String getCity() {
-    return city;
+  public String getLocation() {
+    return location;
   }
 
-  public void setCity(String city) {
-    this.city = city;
+  public void setLocation(String city) {
+    this.location = location;
   }
 
   public String getAddress() {
