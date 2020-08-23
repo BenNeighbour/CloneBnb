@@ -37,7 +37,7 @@ const Search: React.FC<Props> = (props) => {
     return (
       <div
         style={{
-          width: "100%",
+          width: "100vw",
           height: "100vh",
           display: "grid",
         }}
@@ -50,11 +50,14 @@ const Search: React.FC<Props> = (props) => {
         />
         <div
           style={{
-            textAlign: "center",
+            // textAlign: "center",
+            marginLeft: "3vw",
+            marginRight: "3vw",
+            width: "94%"
           }}
         >
           {/* Get the response and map it here */}
-          <SearchResults
+          <SearchResults 
             history={props.history}
             location={props.location}
             match={props.match}

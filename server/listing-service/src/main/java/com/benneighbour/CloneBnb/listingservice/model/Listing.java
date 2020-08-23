@@ -19,7 +19,7 @@ import java.util.UUID;
  */
 @Entity
 @Table(name = "listing")
-@JsonSerialize(include= JsonSerialize.Inclusion.NON_EMPTY)
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Listing implements Serializable {
 
@@ -34,6 +34,9 @@ public class Listing implements Serializable {
   @Column(name = "name")
   private String name;
 
+  @Column(name = "description")
+  private String description;
+
   @Column(name = "location")
   private String location;
 
@@ -46,16 +49,14 @@ public class Listing implements Serializable {
   @Enumerated(EnumType.STRING)
   private List<Amenity> amenities;
 
-  //  @OneToMany(cascade = CascadeType.ALL, targetEntity = Stay.class, fetch = FetchType.LAZY)
-  //  private List<Stay> stays;
-
   @Column(name = "type")
   private PropertyType type;
 
   @Column(name = "numberOfGuests")
   private Integer numberOfGuests;
 
-  // TODO: List of pictures here
+  @Column(name = "thumbnail")
+  private String thumbnailUrl;
 
   @Transient private Integer averageStars;
 
@@ -199,6 +200,22 @@ public class Listing implements Serializable {
 
   public void setOwnerId(UUID ownerId) {
     this.ownerId = ownerId;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  public void setThumbnailUrl(String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   enum PropertyType {

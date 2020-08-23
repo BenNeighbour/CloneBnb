@@ -14,7 +14,7 @@ import java.util.UUID;
  * @created 15/08/2020
  * @project CloneBnb
  */
-@JsonSerialize(include= JsonSerialize.Inclusion.NON_EMPTY)
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
 public class Listing implements Serializable {
 
   private static final long serialVersionUID = 8096657782794609195L;
@@ -23,6 +23,8 @@ public class Listing implements Serializable {
   private UUID id;
 
   private String name;
+
+  private String description;
 
   private String location;
 
@@ -34,7 +36,7 @@ public class Listing implements Serializable {
 
   private Integer numberOfGuests;
 
-  // TODO: List of pictures here
+  private String thumbnailUrl;
 
   private Integer averageStars;
 
@@ -49,7 +51,6 @@ public class Listing implements Serializable {
   private User owner;
 
   private Double pricePerNight;
-
 
   public Listing() {}
 
@@ -163,6 +164,22 @@ public class Listing implements Serializable {
 
   public void setPricePerNight(Double pricePerNight) {
     this.pricePerNight = pricePerNight;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  public void setThumbnailUrl(String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
   }
 
   enum PropertyType {
