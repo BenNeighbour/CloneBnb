@@ -11,7 +11,6 @@ const Home: React.FC<Props> = (props) => {
     <div
       style={{
         width: "100%",
-        height: "100vh",
         display: "grid",
       }}
     >

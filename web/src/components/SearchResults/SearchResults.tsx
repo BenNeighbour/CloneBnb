@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import StarBorderRoundedIcon from "@material-ui/icons/StarBorderRounded";
+import "./SearchResult.css";
 
 interface Props extends RouteComponentProps<any> {
   results: Array<any>;
@@ -28,23 +29,26 @@ const SearchResults: React.FC<Props> = (props) => {
       <Divider />
       {props.results.map((listing: any, index: number) => (
         <div
+          className={`listing-${index + 1}-${listing.id}`}
           key={`listing-${index}`}
           style={{
             width: "100%",
             paddingBottom: "2vh",
+            cursor: "pointer",
           }}
         >
-          {/* <p>{listing.name}</p>
-          <p>{listing.address}</p>
-          <p>{listing.amenities}</p> */}
-
           <Card
+            onClick={() => {
+              props.history.push("/listing/ccd30e15-4176-4564-b1a9-bdcf20ab1b99")
+            }}
+            className="listing"
             elevation={0}
             variant="outlined"
             style={{
               width: "100%",
               textAlign: "left",
               border: "none",
+              margin: 0
             }}
           >
             <CardContent>

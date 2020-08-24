@@ -37,8 +37,7 @@ const Search: React.FC<Props> = (props) => {
     return (
       <div
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: "100%",
           display: "grid",
         }}
       >
@@ -50,7 +49,6 @@ const Search: React.FC<Props> = (props) => {
         />
         <div
           style={{
-            // textAlign: "center",
             marginLeft: "3vw",
             marginRight: "3vw",
             width: "94%"
