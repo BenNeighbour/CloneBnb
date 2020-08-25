@@ -1,0 +1,8 @@
+.mainSection * {
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.mainSection hr {
+    height: 0.2vh;
+}

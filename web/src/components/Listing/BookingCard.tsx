@@ -1,32 +1,33 @@
 import * as React from "react";
-import { RouteComponentProps } from 'react-router-dom';
-import Card from '@material-ui/core/Card';
-import Typography from '@material-ui/core/Typography';
-import CardContent from '@material-ui/core/CardContent';
+import { RouteComponentProps } from "react-router-dom";
+import Card from "@material-ui/core/Card";
+import Typography from "@material-ui/core/Typography";
+import CardContent from "@material-ui/core/CardContent";
 
-interface Props extends RouteComponentProps<any> { }
+interface Props extends RouteComponentProps<any> {}
 
 const BookingCard: React.FC<Props> = (props) => {
-    return (
-        <Card variant="outlined">
+  return (
+    <Card variant="outlined" style={{
+      border: "1px solid rgb(221, 221, 221)",
+      borderRadius: "12px",
+      padding: "24px",
+      boxShadow: "rgba(0, 0, 0, 0.12) 0px 5px 17px"
+    }}>
       <CardContent>
-        <Typography color="textSecondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="h2">
-          dfsdfsd
-        </Typography>
-        <Typography color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
+        <h2 style={{
+          fontWeight: 500
+        }}>
+          Add Dates for pricing
+        </h2>
+        <br /> 
+        
+        {/* Grid Here */}
+        {/* Form fields Here */}
+        {/* Form Submit Button Here */}
       </CardContent>
     </Card>
-    );
-}
+  );
+};
 
 export default BookingCard;
