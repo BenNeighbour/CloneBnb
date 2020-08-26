@@ -15,7 +15,7 @@ const Home: React.FC<Props> = (props) => {
       }}
     >
       <Navigation
-        isSearchNavbar={true}
+        isSearchNavbar={false}
         history={props.history}
         match={props.match}
         location={props.location}

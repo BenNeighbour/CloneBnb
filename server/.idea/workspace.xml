@@ -144,9 +144,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1272" />
+    <option name="x" value="1578" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
+    <option name="width" value="1233" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -392,7 +392,7 @@
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1296" height="1040" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49905837" visible="true" weight="0.29045308" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49905837" visible="true" weight="0.29530746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />

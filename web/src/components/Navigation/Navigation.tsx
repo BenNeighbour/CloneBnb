@@ -14,6 +14,7 @@ const Navigation: React.FC<Props> = (props) => {
 
   return (
     <AppBar
+      position="sticky"
       className={!isOnTop ? "navbar" : ""}
       elevation={0}
       style={{

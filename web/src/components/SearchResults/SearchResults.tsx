@@ -19,7 +19,6 @@ const SearchResults: React.FC<Props> = (props) => {
         margin: "0 auto",
         textAlign: "center",
         display: "inline-block",
-        marginTop: "10vh",
         overflowX: "hidden",
         width: "100%",
       }}

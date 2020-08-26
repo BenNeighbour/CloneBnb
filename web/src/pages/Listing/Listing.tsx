@@ -22,15 +22,17 @@ const Listing: React.FC<Props> = (props) => {
         match={props.match}
         location={props.location}
       />
-      <Container maxWidth="lg" style={{
-        paddingLeft: "7vw",
-        paddingRight: "7vw"
-      }}>
+      <Container
+        maxWidth="lg"
+        style={{
+          paddingLeft: "7vw",
+          paddingRight: "7vw",
+        }}
+      >
         {/* Layout here */}
         <div
           style={{
             display: "inline-block",
-            marginTop: "10vh",
           }}
         >
           {/* Top Section here */}
@@ -52,19 +54,14 @@ const Listing: React.FC<Props> = (props) => {
             />
           </div>
 
-          <Grid
-            container
-            spacing={9}
-            style={{
-              overflowX: "hidden",
-            }}
-          >
+          <Grid container direction="row" alignItems="stretch" spacing={9}>
             <Grid
               item
               xs={12}
               sm={7}
               style={{
                 position: "relative",
+                paddingBottom: 0,
               }}
             >
               <MainSection
@@ -72,20 +69,18 @@ const Listing: React.FC<Props> = (props) => {
                 match={props.match}
                 history={props.history}
                 title="Cool Apartment"
-                longDescription="22nd floor Interior designed, stunning views of the City and Tower of London.
-Most of the London landmarks can be seen from the flat with no obstruction.
-Lovely open plan sitting room/kitchen separate large double bedroom, large separate bath/shower room. Integrated Sonos sound system, luxury bedding and 5* accommodation. Security tight, 24hr concierge.
-Luxury living."
               />
             </Grid>
-            <Grid item xs={12} sm={5}>
+            <Grid item xs={12} sm={5} className="stickyCard">
               <BookingCard
                 location={props.location}
                 history={props.history}
                 match={props.match}
               />
             </Grid>
+
           </Grid>
+          
         </div>
       </Container>
     </div>

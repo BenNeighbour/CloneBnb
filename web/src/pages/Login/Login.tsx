@@ -29,7 +29,7 @@ const Login: React.FC<Props> = (props) => {
         style={{
           display: "grid",
           placeItems: "center",
-          height: "100vh",
+          height: "90vh",
         }}
       >
         <Paper

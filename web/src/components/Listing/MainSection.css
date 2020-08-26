@@ -1,8 +1,13 @@
 .mainSection * {
-    margin-top: 1.5vh;
-    margin-bottom: 1.5vh;
+  margin-top: 1.5vh;
 }
 
 .mainSection hr {
-    height: 0.2vh;
+  height: 0.2vh;
+}
+
+.stickyCard {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
 }
