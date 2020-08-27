@@ -31,9 +31,6 @@ const MainSection: React.FC<Props> = (props) => {
           paddingTop: 0,
         }}
       >
-        <br />
-        <Divider />
-        <br />
         <p>xcvcxx</p>
         <br />
         <Divider />
