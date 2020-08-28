@@ -3,11 +3,9 @@ import { RouteComponentProps } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import "./MainSection.css";
-import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
-import { KeyboardDatePicker } from "@material-ui/pickers";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
+import BookingCardForm from "./BookingCardForm";
 
 interface Props extends RouteComponentProps<any> {}
 
@@ -34,45 +32,15 @@ const BookingCard: React.FC<Props> = (props) => {
               Add Dates for pricing
             </h2>
             <br />
-
-            {/* Grid Here */}
-            {/* Form fields Here */}
-            {/* Form Submit Button Here */}
-            <Grid container spacing={0}>
-              <Grid item xs={12}>
-                <TextField label="Guests" variant="outlined" fullWidth />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <KeyboardDatePicker
-                  value={null}
-                  inputVariant="outlined"
-                  onChange={() => {}}
-                  style={{
-                    overflowY: "hidden",
-                  }}
-                  label="Check in"
-                  fullWidth
-                  format="dd/MM/yy"
-                  margin="none"
-                  name="checkInDate"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <KeyboardDatePicker
-                  value={null}
-                  inputVariant="outlined"
-                  onChange={() => {}}
-                  style={{
-                    overflowY: "hidden",
-                  }}
-                  label="Check out"
-                  fullWidth
-                  format="dd/MM/yy"
-                  margin="none"
-                  name="checkOutDate"
-                />
-              </Grid>
-            </Grid>
+            <BookingCardForm
+              onSubmit={(formValues) => {
+                console.log(formValues)
+              }}
+              errors=""
+              location={props.location}
+              history={props.history}
+              match={props.match}
+            />
           </CardContent>
         </Card>
       </div>
