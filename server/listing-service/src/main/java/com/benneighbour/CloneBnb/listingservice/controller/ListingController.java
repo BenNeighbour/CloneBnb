@@ -4,6 +4,7 @@ import com.benneighbour.CloneBnb.listingservice.common.GlobalDao;
 import com.benneighbour.CloneBnb.listingservice.model.Listing;
 import com.benneighbour.CloneBnb.listingservice.model.ListingSpecificationBuilder;
 import com.benneighbour.CloneBnb.listingservice.model.SearchOperation;
+import com.benneighbour.CloneBnb.listingservice.service.ListingCommandService;
 import com.google.common.base.Joiner;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -26,8 +28,11 @@ public class ListingController {
 
   private final GlobalDao dao;
 
-  public ListingController(final GlobalDao dao) {
+  private final ListingCommandService listingCommandService;
+
+  public ListingController(GlobalDao dao, ListingCommandService listingCommandService) {
     this.dao = dao;
+    this.listingCommandService = listingCommandService;
   }
 
   @GetMapping("internal/by/{id}")
@@ -75,5 +80,10 @@ public class ListingController {
     }
 
     return returnBool;
+  }
+
+  @PostMapping("listing/create")
+  public CompletableFuture<String> createListing(@RequestBody Listing listing) throws Exception {
+    return listingCommandService.createListing(listing);
   }
 }

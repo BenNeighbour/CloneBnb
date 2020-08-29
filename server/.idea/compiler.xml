@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gateway-service" />
         <module name="listing-service" />
+        <module name="saga-event-service" />
         <module name="discovery-service" />
       </profile>
     </annotationProcessing>
@@ -21,6 +22,7 @@
       <module name="discovery-service" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="listing-service" options="-parameters" />
+      <module name="saga-event-service" options="-parameters" />
     </option>
   </component>
 </project>

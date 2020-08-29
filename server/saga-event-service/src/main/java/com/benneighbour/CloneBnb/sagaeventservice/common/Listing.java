@@ -1,12 +1,5 @@
-package com.benneighbour.CloneBnb.listingservice.model;
+package com.benneighbour.CloneBnb.sagaeventservice.common;
 
-import com.benneighbour.CloneBnb.listingservice.common.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
@@ -17,73 +10,65 @@ import java.util.UUID;
  * @created 15/08/2020
  * @project CloneBnb
  */
-@Entity
-@Table(name = "listing")
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Listing implements Serializable {
 
-  private static final long serialVersionUID = -2907044854812972105L;
+  private static final long serialVersionUID = 8096657782794609195L;
 
-  @Id
-  @GeneratedValue
-  @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-  @Column(columnDefinition = "uuid", updatable = false)
-  private UUID id;
+  public UUID id;
 
-  @Column(name = "name")
-  private String name;
+  public String name;
 
-  @Column(name = "description")
-  private String description;
+  public String description;
 
-  @Column(name = "longDescription")
-  private String longDescription;
+  public String longDescription;
 
-  @Column(name = "location")
-  private String location;
+  public String location;
 
-  @Column(name = "address")
-  private String address;
+  public String address;
 
-  @ElementCollection(fetch = FetchType.LAZY)
-  @JoinTable(name = "amenity", joinColumns = @JoinColumn(name = "listing_id"))
-  @Column(name = "amenity", nullable = false)
-  @Enumerated(EnumType.STRING)
-  private List<Amenity> amenities;
+  public List<Amenity> amenities;
 
-  @Column(name = "type")
-  private PropertyType type;
+  public PropertyType type;
 
-  @Column(name = "numberOfGuests")
-  private Integer numberOfGuests;
+  public Integer numberOfGuests;
 
-  @Column(name = "thumbnail")
-  private String thumbnailUrl;
+  public String thumbnailUrl;
 
-  @Transient private Integer averageStars;
+  public Integer averageStars;
 
-  @Transient private List<LocalDate> unvacantDates;
+  public List<LocalDate> unvacantDates;
 
-  @Column(name = "numberOfBedrooms")
-  private Integer numberOfBedrooms;
+  public Integer numberOfBedrooms;
 
-  @Column(name = "numberOfBeds")
-  private Integer numberOfBeds;
+  public Integer numberOfBeds;
 
-  @Column(name = "numberOfBathrooms")
-  private Integer numberOfBathrooms;
+  public Integer numberOfBathrooms;
 
-  @Transient private User owner;
+  public User owner;
 
-  @JsonIgnore
-  @Column(name = "ownerId")
-  private UUID ownerId;
-
-  @Column(name = "pricePerNight")
-  private Double pricePerNight;
+  public Double pricePerNight;
 
   public Listing() {}
+
+  protected Listing(Listing listing) {
+    this.id = listing.id;
+    this.name = listing.name;
+    this.description = listing.description;
+    this.longDescription = listing.longDescription;
+    this.location = listing.location;
+    this.address = listing.address;
+    this.amenities = listing.amenities;
+    this.type = listing.type;
+    this.numberOfGuests = listing.numberOfGuests;
+    this.thumbnailUrl = listing.thumbnailUrl;
+    this.averageStars = listing.averageStars;
+    this.unvacantDates = listing.unvacantDates;
+    this.numberOfBedrooms = listing.numberOfBedrooms;
+    this.numberOfBeds = listing.numberOfBeds;
+    this.numberOfBathrooms = listing.numberOfBathrooms;
+    this.owner = listing.owner;
+    this.pricePerNight = listing.pricePerNight;
+  }
 
   public UUID getId() {
     return id;
@@ -105,7 +90,7 @@ public class Listing implements Serializable {
     return location;
   }
 
-  public void setLocation(String location) {
+  public void setLocation(String city) {
     this.location = location;
   }
 
@@ -197,16 +182,12 @@ public class Listing implements Serializable {
     this.pricePerNight = pricePerNight;
   }
 
-  public UUID getOwnerId() {
-    return ownerId;
-  }
-
-  public void setOwnerId(UUID ownerId) {
-    this.ownerId = ownerId;
-  }
-
   public String getDescription() {
     return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public String getThumbnailUrl() {
@@ -215,10 +196,6 @@ public class Listing implements Serializable {
 
   public void setThumbnailUrl(String thumbnailUrl) {
     this.thumbnailUrl = thumbnailUrl;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
   }
 
   public String getLongDescription() {

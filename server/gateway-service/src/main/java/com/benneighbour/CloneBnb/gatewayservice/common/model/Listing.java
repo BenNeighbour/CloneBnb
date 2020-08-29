@@ -26,6 +26,8 @@ public class Listing implements Serializable {
 
   private String description;
 
+  private String longDescription;
+
   private String location;
 
   private String address;
@@ -180,6 +182,14 @@ public class Listing implements Serializable {
 
   public void setThumbnailUrl(String thumbnailUrl) {
     this.thumbnailUrl = thumbnailUrl;
+  }
+
+  public String getLongDescription() {
+    return longDescription;
+  }
+
+  public void setLongDescription(String longDescription) {
+    this.longDescription = longDescription;
   }
 
   enum PropertyType {
