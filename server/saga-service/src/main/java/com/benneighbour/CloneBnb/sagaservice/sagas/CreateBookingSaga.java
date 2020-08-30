@@ -25,13 +25,12 @@ public class CreateBookingSaga {
   public Message buyTicketSaga(Message message) {
 
     // If the RabbitMQ is not wanting to execute this specific task first, then do not do it!
-    if (message.getCommand() != Command.VERIFY_LISTING_FOR_BOOK) return message;
+    if (message.getCommand() != Command.BOOK_STAY) return message;
 
     // Initialize the rest of the steps for this saga
     Stack<Message> steps = new Stack<>();
     List<Message> nextSteps = new ArrayList<>();
 
-    nextSteps.add(new Message(message.getContent(), Command.BOOK_STAY, "booking-route"));
     nextSteps.add(
         new Message(message.getContent(), Command.UPDATE_LISTING_FOR_BOOK, "listing-route"));
 

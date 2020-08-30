@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="listing-service" />
-        <module name="gateway-service" />
         <module name="discovery-service" />
+        <module name="gateway-service" />
         <module name="common-library" />
         <module name="saga-service" />
+        <module name="listing-service" />
+        <module name="booking-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="authentication-service" options="-parameters" />
+      <module name="booking-service" options="-parameters" />
       <module name="common-library" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
       <module name="event-library" options="-parameters" />
