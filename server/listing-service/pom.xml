@@ -40,29 +40,14 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.axonframework</groupId>
-            <artifactId>axon-spring-boot-starter</artifactId>
-            <version>4.1.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.axonframework</groupId>
-                    <artifactId>axon-server-connector</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
         </dependency>
-
         <dependency>
             <groupId>com.benneighbour.CloneBnb</groupId>
-            <artifactId>saga-event-service</artifactId>
+            <artifactId>common-library</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <type>jar</type>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.axonframework.extensions.springcloud</groupId>
-            <artifactId>axon-springcloud-spring-boot-starter</artifactId>
-            <version>4.1</version>
         </dependency>
 
         <dependency>

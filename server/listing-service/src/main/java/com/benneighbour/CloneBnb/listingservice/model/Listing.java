@@ -31,19 +31,19 @@ public class Listing implements Serializable {
   @Column(columnDefinition = "uuid", updatable = false)
   private UUID id;
 
-  @Column(name = "name")
+  @Column(name = "name", nullable = false)
   private String name;
 
-  @Column(name = "description")
+  @Column(name = "description", nullable = false)
   private String description;
 
-  @Column(name = "longDescription")
+  @Column(name = "longDescription", nullable = false)
   private String longDescription;
 
-  @Column(name = "location")
+  @Column(name = "location", nullable = false)
   private String location;
 
-  @Column(name = "address")
+  @Column(name = "address", nullable = false)
   private String address;
 
   @ElementCollection(fetch = FetchType.LAZY)
@@ -52,35 +52,35 @@ public class Listing implements Serializable {
   @Enumerated(EnumType.STRING)
   private List<Amenity> amenities;
 
-  @Column(name = "type")
+  @Column(name = "type", nullable = false)
   private PropertyType type;
 
-  @Column(name = "numberOfGuests")
+  @Column(name = "numberOfGuests", nullable = false)
   private Integer numberOfGuests;
 
-  @Column(name = "thumbnail")
+  @Column(name = "thumbnail", nullable = false)
   private String thumbnailUrl;
 
   @Transient private Integer averageStars;
 
   @Transient private List<LocalDate> unvacantDates;
 
-  @Column(name = "numberOfBedrooms")
+  @Column(name = "numberOfBedrooms", nullable = false)
   private Integer numberOfBedrooms;
 
-  @Column(name = "numberOfBeds")
+  @Column(name = "numberOfBeds", nullable = false)
   private Integer numberOfBeds;
 
-  @Column(name = "numberOfBathrooms")
+  @Column(name = "numberOfBathrooms", nullable = false)
   private Integer numberOfBathrooms;
 
   @Transient private User owner;
 
   @JsonIgnore
-  @Column(name = "ownerId")
+  @Column(name = "ownerId", nullable = false)
   private UUID ownerId;
 
-  @Column(name = "pricePerNight")
+  @Column(name = "pricePerNight", nullable = false)
   private Double pricePerNight;
 
   public Listing() {}
@@ -228,6 +228,7 @@ public class Listing implements Serializable {
   public void setLongDescription(String longDescription) {
     this.longDescription = longDescription;
   }
+
 
   enum PropertyType {
     Apartment,

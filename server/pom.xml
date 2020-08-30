@@ -13,6 +13,7 @@
         <module>gateway-service</module>
         <module>discovery-service</module>
         <module>listing-service</module>
-        <module>saga-event-service</module>
+        <module>common-library</module>
+        <module>saga-service</module>
     </modules>
 </project>

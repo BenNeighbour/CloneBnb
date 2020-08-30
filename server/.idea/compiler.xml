@@ -2,27 +2,34 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gateway-service" />
         <module name="listing-service" />
-        <module name="saga-event-service" />
+        <module name="gateway-service" />
         <module name="discovery-service" />
+        <module name="common-library" />
+        <module name="saga-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="authentication-service" target="1.8" />
+      <module name="event-library" target="1.8" />
+      <module name="saga-event-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="authentication-service" options="-parameters" />
+      <module name="common-library" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="event-library" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="listing-service" options="-parameters" />
       <module name="saga-event-service" options="-parameters" />
+      <module name="saga-service" options="-parameters" />
     </option>
   </component>
 </project>
