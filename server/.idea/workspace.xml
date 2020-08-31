@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0c23c6-da96-48c3-921c-8a232756efa3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java" beforeDir="false" afterPath="$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,42 +29,7 @@
     <favorites_list name="clonebnb-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#851#852#0" expanded="true" />
-                <element signature="e#897#898#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#1303#1304#0" expanded="true" />
-                <element signature="e#1340#1341#0" expanded="true" />
-                <element signature="e#1556#1557#0" expanded="true" />
-                <element signature="e#1607#1608#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/ReceiverService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -95,10 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/saga-event-service/src/main/java/com/benneighbour/CloneBnb/sagaeventservice/events/ListingUpdatedEvent.java" />
-        <option value="$PROJECT_DIR$/saga-event-service/src/main/java/com/benneighbour/CloneBnb/sagaeventservice/status/ListingStatus.java" />
-        <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
-        <option value="$PROJECT_DIR$/saga-event-service/src/test/java/com/benneighbour/CloneBnb/sagaeventservice/SagaEventServiceApplicationTests.java" />
         <option value="$PROJECT_DIR$/saga-event-service/src/main/java/com/benneighbour/CloneBnb/sagaeventservice/common/Amenity.java" />
         <option value="$PROJECT_DIR$/saga-event-service/src/main/java/com/benneighbour/CloneBnb/sagaeventservice/common/Stay.java" />
         <option value="$PROJECT_DIR$/saga-event-service/src/main/java/com/benneighbour/CloneBnb/sagaeventservice/common/User.java" />
@@ -120,7 +77,6 @@
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/ListingAggregate.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/model/Listing.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/ListingServiceApplication.java" />
-        <option value="$PROJECT_DIR$/listing-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/event-library/src/test/java/com/benneighbour/CloneBnb/eventlibrary/EventLibraryApplicationTests.java" />
         <option value="$PROJECT_DIR$/common-library/src/test/java/com/benneighbour/CloneBnb/commonlibrary/CommonLibraryApplicationTests.java" />
         <option value="$PROJECT_DIR$/common-library/src/main/resources/application.properties" />
@@ -128,7 +84,6 @@
         <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/model/User.java" />
         <option value="$PROJECT_DIR$/listing-service/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/common-library/pom.xml" />
         <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Process.java" />
         <option value="$PROJECT_DIR$/saga-service/pom.xml" />
         <option value="$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/config/Config.java" />
@@ -139,13 +94,19 @@
         <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaConverter.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/ReceiverService.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/ListingController.java" />
-        <option value="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/saga-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/booking-service/pom.xml" />
         <option value="$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java" />
         <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/Config.java" />
         <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/ReceiverService.java" />
+        <option value="$PROJECT_DIR$/rabbitmq-container/Dockerfile" />
+        <option value="$PROJECT_DIR$/rabbitmq-container/rabbitmq.conf" />
+        <option value="$PROJECT_DIR$/rabbitmq-container/definitions.json" />
+        <option value="$PROJECT_DIR$/saga-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/common-library/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-container/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -203,7 +164,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,42 +179,7 @@
             <path>
               <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bookingservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bookingservice" type="462c0819:PsiDirectoryNode" />
-              <item name="receiver" type="462c0819:PsiDirectoryNode" />
+              <item name="common-library" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -372,12 +297,21 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sagaservice" type="462c0819:PsiDirectoryNode" />
-              <item name="sagas" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="saga-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,15 +460,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4982639" visible="true" weight="0.26941746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4982639" visible="true" weight="0.27831715" />
       <window_info id="Structure" order="1" sideWeight="0.5017361" side_tool="true" weight="0.3001618" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50094163" side_tool="true" weight="0.25809062" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3484163" />
@@ -543,7 +477,7 @@
       <window_info anchor="bottom" id="Debug" order="5" weight="0.42307693" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32918552" />
       <window_info anchor="bottom" id="GraphQL" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32918552" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32918552" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -555,6 +489,9 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -581,22 +518,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/saga-event-service/src/main/java/com/benneighbour/CloneBnb/sagaeventservice/common/Listing.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.3.2.RELEASE/spring-data-commons-2.3.2.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-event-service/src/main/java/com/benneighbour/CloneBnb/sagaeventservice/events/ListingCreatedEvent.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-messaging/4.1.1/axon-messaging-4.1.1.jar!/org/axonframework/messaging/annotation/WrappedMessageHandlingMember.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-modelling/4.1.1/axon-modelling-4.1.1.jar!/org/axonframework/modelling/command/AggregateAnnotationCommandHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -728,16 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -821,41 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/ReceiverService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -873,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
@@ -890,20 +759,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java">
+    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/ReceiverService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="224">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#802#803#0" expanded="true" />
@@ -920,13 +786,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/ReceiverService.java">
+    <entry file="file://$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="573">
+          <caret line="41" column="37" lean-forward="true" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saga-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-container/rabbitmq.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-container/definitions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-container/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-container/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
