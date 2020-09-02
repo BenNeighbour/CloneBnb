@@ -7,10 +7,10 @@ import java.io.IOException;
 
 /**
  * @author Ben Neighbour
- * @created 30/08/2020
+ * @created 02/09/2020
  * @project CloneBnb
  */
-public class SagaConverter {
+public class MessageConverter {
     public static ObjectMapper mapper = new ObjectMapper();
 
     public static <T> String encode(T obj) throws JsonProcessingException {
