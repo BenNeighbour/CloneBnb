@@ -27,6 +27,5 @@ public class CreateListingSaga {
 
     System.out.println("Create listing saga ended!");
     SagaLifecycle.end();
-
   }
 }
