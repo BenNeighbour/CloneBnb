@@ -2,25 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0c23c6-da96-48c3-921c-8a232756efa3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/ReceiverService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Process.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listing-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/ReceiverService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saga-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/saga-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/config/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/MessageReactor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-library/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/MessageConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/MessageDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/model/role/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/model/role/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/broker/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/broker/MessagePublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/common/GlobalDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/common/GlobalDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/ListingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/ListingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/StayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/StayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/dao/ListingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/dao/ListingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/model/Listing.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/model/Listing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,24 +49,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/MessageReactor.java">
+        <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/aggregate/ListingAggregate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="136">
+              <caret line="93" column="27" lean-forward="true" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
-                <element signature="e#954#955#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/MessageDTO.java">
+        <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/saga/CreateListingSaga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            <state relative-caret-position="189">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,16 +90,24 @@
       <find>@Entity</find>
       <find>Integer.</find>
       <find>Listing</find>
-      <find>private</find>
       <find>Q1</find>
       <find>convertSendAndReceive</find>
       <find>process</find>
       <find>setDone</find>
       <find>queue1</find>
       <find>MessageDTO</find>
+      <find>amqp</find>
+      <find>class User</find>
+      <find>listing</find>
+      <find>class Listing</find>
+      <find>owner</find>
+      <find>@Transient</find>
+      <find>@AggregateIdentifier</find>
+      <find>private</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\benne\Documents\CloneBnb\server\saga-service</dir>
+      <dir>C:\Users\benne\Documents\CloneBnb\server\listing-service</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -109,24 +116,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/ListingAggregate.java" />
-        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/model/Listing.java" />
-        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/ListingServiceApplication.java" />
-        <option value="$PROJECT_DIR$/event-library/src/test/java/com/benneighbour/CloneBnb/eventlibrary/EventLibraryApplicationTests.java" />
-        <option value="$PROJECT_DIR$/common-library/src/test/java/com/benneighbour/CloneBnb/commonlibrary/CommonLibraryApplicationTests.java" />
-        <option value="$PROJECT_DIR$/common-library/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/event-library/pom.xml" />
-        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/model/User.java" />
-        <option value="$PROJECT_DIR$/listing-service/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/saga-service/pom.xml" />
-        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Receiver.java" />
-        <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaConverter.java" />
-        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/ListingController.java" />
-        <option value="$PROJECT_DIR$/rabbitmq-container/Dockerfile" />
-        <option value="$PROJECT_DIR$/rabbitmq-container/rabbitmq.conf" />
         <option value="$PROJECT_DIR$/saga-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/common-library/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq-container/docker-compose.yml" />
         <option value="$PROJECT_DIR$/booking-service/pom.xml" />
         <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/common/model/Amenity.java" />
@@ -147,19 +137,36 @@
         <option value="$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/ReceiverService.java" />
-        <option value="$PROJECT_DIR$/listing-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/broker/Config.java" />
         <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Message.java" />
         <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/broker/MessagePublisher.java" />
-        <option value="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/Config.java" />
         <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/MessagePublisher.java" />
         <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/dao/BookingDao.java" />
         <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/MessageConverter.java" />
-        <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingServiceImpl.java" />
         <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Status.java" />
         <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/MessageReactor.java" />
         <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/MessageDTO.java" />
+        <option value="$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/booking-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/common/model/Listing.java" />
+        <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/User.java" />
+        <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/CreateListingCommand.java" />
+        <option value="$PROJECT_DIR$/common-library/pom.xml" />
+        <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/model/Amenity.java" />
+        <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/model/ListingStatus.java" />
+        <option value="$PROJECT_DIR$/listing-service/pom.xml" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/common/GlobalDao.java" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/dao/ListingDao.java" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/ListingController.java" />
+        <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/command/CreateListingCommand.java" />
+        <option value="$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/event/ListingCreatedEvent.java" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/aggregate/ListingAggregate.java" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/model/Listing.java" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingService.java" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/saga/CreateListingSaga.java" />
       </list>
     </option>
   </component>
@@ -222,19 +229,14 @@
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="saga-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="saga-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Run Configurations" type="21c1f71a:MavenProjectsStructure$RunConfigurationsNode" />
-        </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1335" />
-    <option name="y" value="14" />
-    <option name="width" value="1233" />
+    <option name="x" value="1272" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -243,86 +245,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bookingservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bookingservice" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bookingservice" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bookingservice" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="booking-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -362,53 +291,93 @@
             <path>
               <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common-library" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="commonlibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common-library" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="listingservice" type="462c0819:PsiDirectoryNode" />
+              <item name="commonlibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="common-library" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="listingservice" type="462c0819:PsiDirectoryNode" />
+              <item name="commonlibrary" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="listingservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="listingservice" type="462c0819:PsiDirectoryNode" />
+              <item name="saga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clonebnb-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="listing-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="listingservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,6 +394,7 @@
       <recent name="com.benneighbour.CloneBnb.listingservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.benneighbour.CloneBnb.commonlibrary.model" />
       <recent name="com.benneighbour.CloneBnb.sagaeventservice.common" />
       <recent name="com.benneighbour.CloneBnb.listingservice.dao" />
       <recent name="com.benneighbour.CloneBnb.listingservice.common.model" />
@@ -620,25 +590,25 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.50094163" side_tool="true" weight="0.25809062" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4982639" visible="true" weight="0.28074434" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4982639" visible="true" weight="0.2855987" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32918552" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3484163" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49919093" weight="0.3484163" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="6" visible="true" weight="0.520362" />
+      <window_info active="true" anchor="bottom" id="Debug" order="6" sideWeight="0.49919093" visible="true" weight="0.520362" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32918552" />
       <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32918552" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32918552" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32918552" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.76583713" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008091" side_tool="true" weight="0.520362" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.15372169" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.14886731" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
@@ -667,303 +637,14 @@
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingServiceImpl.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/MessageReactor.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/common/model/Listing.java" />
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/common/model/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/common/model/Amenity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Stay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/model/BookingResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_201/src.zip!/java/io/IOException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.11.2/jackson-core-2.11.2.jar!/com/fasterxml/jackson/core/JsonProcessingException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-container/definitions.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/model/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-container/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-container/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_201/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="186" column="24" selection-start-line="186" selection-start-column="24" selection-end-line="186" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.8.RELEASE/spring-webmvc-5.2.8.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#492#522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/controller/BookingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.10.RELEASE/spring-rabbit-2.2.10.RELEASE.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="915" lean-forward="true" selection-start-line="915" selection-end-line="915" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/ReceiverService.java" />
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/receiver/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/BookingServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#344#345#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.2.8.RELEASE/spring-messaging-5.2.8.RELEASE.jar!/org/springframework/messaging/handler/invocation/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Process.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/ReceiverService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/ListingServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#706#707#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Process.java" />
+    <entry file="file://$PROJECT_DIR$/saga-service/src/main/java/com/benneighbour/CloneBnb/sagaservice/sagas/CreateBookingSaga.java" />
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/SagaProvider.java" />
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/receiver/ReceiverService.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.2.9.RELEASE/spring-amqp-2.2.9.RELEASE.jar!/org/springframework/amqp/core/Message.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -971,16 +652,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Message.java" />
     <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/broker/MessagePublisher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1000,20 +672,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listing-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1058,50 +716,329 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/MessageReactor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/MessageDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/controller/BookingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/Status.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/ListingServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/booking-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/benneighbour/CloneBnb/gatewayservice/common/model/Listing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="54" column="31" lean-forward="true" selection-start-line="46" selection-start-column="2" selection-end-line="54" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/common/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="64" column="3" lean-forward="true" selection-start-line="17" selection-end-line="64" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/model/Amenity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="46" column="3" lean-forward="true" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+          <folding>
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="48" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-messaging/4.0.3/axon-messaging-4.0.3.jar!/org/axonframework/messaging/Scope.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-modelling/4.0.3/axon-modelling-4.0.3.jar!/org/axonframework/modelling/command/AggregateLifecycle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-messaging/4.0.3/axon-messaging-4.0.3.jar!/org/axonframework/messaging/unitofwork/DefaultUnitOfWork.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-messaging/4.0.3/axon-messaging-4.0.3.jar!/org/axonframework/commandhandling/SimpleCommandBus.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-modelling/4.0.3/axon-modelling-4.0.3.jar!/org/axonframework/modelling/command/inspection/AnnotatedAggregateMetaModelFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
+          <folding>
+            <element signature="e#0#10914#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/common/GlobalDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/model/ListingStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/dao/ListingDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="1697" column="17" selection-start-line="1697" selection-start-column="17" selection-end-line="1697" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/model/Amenity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.8.0_201/src.zip!/java/lang/reflect/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="754" column="16" selection-start-line="754" selection-start-column="16" selection-end-line="754" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/controller/ListingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="77" column="68" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="68" />
+          <folding>
+            <element signature="e#2752#2753#0" expanded="true" />
+            <element signature="e#2799#2800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-messaging/4.0.3/axon-messaging-4.0.3.jar!/org/axonframework/messaging/annotation/AnnotatedMessageHandlingMember.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/axonframework/axon-modelling/4.0.3/axon-modelling-4.0.3.jar!/org/axonframework/modelling/saga/StartSaga.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/event/ListingCreatedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/command/CreateListingCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-359">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/model/Listing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="62" />
+        <state relative-caret-position="340">
+          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+          <folding>
+            <element signature="e#5262#5263#0" expanded="true" />
+            <element signature="e#5283#5284#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/service/BookingServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="192">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/booking-service/src/main/java/com/benneighbour/CloneBnb/bookingservice/broker/MessageReactor.java">
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="184">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-library/src/main/java/com/benneighbour/CloneBnb/commonlibrary/MessageDTO.java">
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/aggregate/ListingAggregate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state relative-caret-position="136">
+          <caret line="93" column="27" lean-forward="true" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/saga/CreateListingSaga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

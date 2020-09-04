@@ -1,9 +1,11 @@
 package com.benneighbour.CloneBnb.listingservice.controller;
 
+import com.benneighbour.CloneBnb.listingservice.aggregate.ListingAggregate;
 import com.benneighbour.CloneBnb.listingservice.common.GlobalDao;
 import com.benneighbour.CloneBnb.listingservice.model.Listing;
 import com.benneighbour.CloneBnb.listingservice.model.ListingSpecificationBuilder;
 import com.benneighbour.CloneBnb.listingservice.model.SearchOperation;
+import com.benneighbour.CloneBnb.listingservice.service.ListingService;
 import com.google.common.base.Joiner;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -26,12 +29,15 @@ public class ListingController {
 
   private final GlobalDao dao;
 
-  public ListingController(GlobalDao dao) {
+  private final ListingService service;
+
+  public ListingController(final GlobalDao dao, final ListingService service) {
     this.dao = dao;
+    this.service = service;
   }
 
-  @GetMapping("internal/by/{id}")
-  public Listing findListingById(@PathVariable("id") UUID id) {
+  @GetMapping("internal/by/{listingId}")
+  public Listing findListingById(@PathVariable("listingId") UUID id) {
     return dao.getListingById(id);
   }
 
@@ -66,6 +72,11 @@ public class ListingController {
     compatibleListings.forEach(listing -> listing.setUnvacantDates(null));
 
     return compatibleListings;
+  }
+
+  @PostMapping("listing/create")
+  public CompletableFuture<Listing> saveListing(@RequestBody Listing listing) {
+    return service.createListing(listing);
   }
 
   private boolean isWithinRange(LocalDate checkIn, LocalDate checkOut, List<LocalDate> testDates) {

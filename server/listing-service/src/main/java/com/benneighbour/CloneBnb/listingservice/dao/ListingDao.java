@@ -15,6 +15,6 @@ import java.util.UUID;
 @Repository
 public interface ListingDao extends JpaRepository<Listing, UUID>, JpaSpecificationExecutor<Listing> {
 
-  Listing findListingById(UUID id);
+  Listing findListingByListingId(UUID id);
 
 }

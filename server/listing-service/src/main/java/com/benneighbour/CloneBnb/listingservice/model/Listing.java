@@ -1,7 +1,7 @@
 package com.benneighbour.CloneBnb.listingservice.model;
 
+import com.benneighbour.CloneBnb.commonlibrary.command.CreateListingCommand;
 import com.benneighbour.CloneBnb.listingservice.common.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -28,69 +28,69 @@ public class Listing implements Serializable {
   @Id
   @GeneratedValue
   @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-  @Column(columnDefinition = "uuid", updatable = false)
-  private UUID id;
+  @Column(columnDefinition = "uuid", updatable = false, name = "id")
+  public UUID listingId;
 
   @Column(name = "name", nullable = false)
-  private String name;
+  public String name;
 
   @Column(name = "description", nullable = false)
-  private String description;
+  public String description;
 
   @Column(name = "longDescription", nullable = false)
-  private String longDescription;
+  public String longDescription;
 
   @Column(name = "location", nullable = false)
-  private String location;
+  public String location;
 
   @Column(name = "address", nullable = false)
-  private String address;
+  public String address;
 
   @ElementCollection(fetch = FetchType.LAZY)
   @JoinTable(name = "amenity", joinColumns = @JoinColumn(name = "listing_id"))
   @Column(name = "amenity", nullable = false)
   @Enumerated(EnumType.STRING)
-  private List<Amenity> amenities;
+  public List<Amenity> amenities;
 
   @Column(name = "type", nullable = false)
-  private PropertyType type;
+  public CreateListingCommand.PropertyType type;
 
   @Column(name = "numberOfGuests", nullable = false)
-  private Integer numberOfGuests;
+  public Integer numberOfGuests;
 
   @Column(name = "thumbnail", nullable = false)
-  private String thumbnailUrl;
+  public String thumbnailUrl;
 
-  @Transient private Integer averageStars;
+  @Transient public Integer averageStars;
 
-  @Transient private List<LocalDate> unvacantDates;
+  @Transient public List<LocalDate> unvacantDates;
 
   @Column(name = "numberOfBedrooms", nullable = false)
-  private Integer numberOfBedrooms;
+  public Integer numberOfBedrooms;
 
   @Column(name = "numberOfBeds", nullable = false)
-  private Integer numberOfBeds;
+  public Integer numberOfBeds;
 
   @Column(name = "numberOfBathrooms", nullable = false)
-  private Integer numberOfBathrooms;
+  public Integer numberOfBathrooms;
 
-  @Transient private User owner;
+  @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+  @Transient public User owner;
 
-  @JsonIgnore
   @Column(name = "ownerId", nullable = false)
-  private UUID ownerId;
+  public UUID ownerId;
 
   @Column(name = "pricePerNight", nullable = false)
-  private Double pricePerNight;
+  public Double pricePerNight;
 
   public Listing() {}
 
-  public UUID getId() {
-    return id;
+  public UUID getListingId() {
+    return listingId;
   }
 
-  public void setId(UUID id) {
-    this.id = id;
+  public void setListingId(UUID listingId) {
+    this.listingId = listingId;
   }
 
   public String getName() {
@@ -123,14 +123,6 @@ public class Listing implements Serializable {
 
   public void setAmenities(List<Amenity> amenities) {
     this.amenities = amenities;
-  }
-
-  public PropertyType getType() {
-    return type;
-  }
-
-  public void setType(PropertyType type) {
-    this.type = type;
   }
 
   public Integer getNumberOfGuests() {
@@ -229,9 +221,11 @@ public class Listing implements Serializable {
     this.longDescription = longDescription;
   }
 
+  public CreateListingCommand.PropertyType getType() {
+    return type;
+  }
 
-  enum PropertyType {
-    Apartment,
-    House
+  public void setType(CreateListingCommand.PropertyType type) {
+    this.type = type;
   }
 }

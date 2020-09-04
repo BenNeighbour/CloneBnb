@@ -39,9 +39,9 @@ public class GlobalDao {
 
   // Fill in the owner field for the listing
   public Listing getListingById(UUID id) {
-    Listing listing = listingDao.findListingById(id);
+    Listing listing = listingDao.findListingByListingId(id);
 
-    // Get the user by the owner id field by making the cross-service call to gateway
+    // Get the user by the owner listingId field by making the cross-service call to gateway
     User owner =
         restTemplate.getForObject(
             "http://gateway-service/internal/owner/by/" + listing.getOwnerId().toString(),
@@ -54,13 +54,18 @@ public class GlobalDao {
     return listing;
   }
 
+  public User getOwnerById(UUID ownerId) {
+    return restTemplate.getForObject(
+        "http://gateway-service/internal/owner/by/" + ownerId.toString(), User.class);
+  }
+
   // Get all of the listings with the search terms and their owners
   public List<Listing> findAllListings(Specification<Listing> specification) {
     List<Listing> listings = listingDao.findAll(specification);
 
     listings.forEach(
         listing -> {
-          this.getListingById(listing.getId());
+          this.getListingById(listing.getListingId());
         });
 
     return listings;
@@ -72,7 +77,7 @@ public class GlobalDao {
     List<Stay> availableStays =
         stayDao.findAll().stream()
             // Filter based off if the current object actually belongs to the list
-            .filter(stay -> stay.getListing().getId().equals(listing.getId()))
+            .filter(stay -> stay.getListing().getListingId().equals(listing.getListingId()))
 
             // Filter again based of if the stay is not in progress
             .filter(stay -> !stay.isFinished())
@@ -93,7 +98,7 @@ public class GlobalDao {
                   .mapToObj(i -> stay.getCheckInDate().plusDays(i))
                   .collect(Collectors.toList());
 
-                    listing.getUnvacantDates().addAll(datesBetween);
+          listing.getUnvacantDates().addAll(datesBetween);
         });
   }
 }

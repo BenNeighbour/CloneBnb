@@ -1,10 +1,8 @@
 package com.benneighbour.CloneBnb.bookingservice.service;
 
-import com.benneighbour.CloneBnb.bookingservice.broker.MessageReactor;
 import com.benneighbour.CloneBnb.bookingservice.dao.BookingDao;
 import com.benneighbour.CloneBnb.bookingservice.model.Booking;
 import com.benneighbour.CloneBnb.bookingservice.model.BookingResponse;
-import com.benneighbour.CloneBnb.commonlibrary.MessageDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -21,30 +19,19 @@ public class BookingServiceImpl implements BookingService {
 
   private final BookingDao bookingDao;
 
-  private final MessageReactor publisher;
-
-  public BookingServiceImpl(final BookingDao bookingDao, final MessageReactor publisher) {
+  public BookingServiceImpl(final BookingDao bookingDao) {
     this.bookingDao = bookingDao;
-    this.publisher = publisher;
   }
 
   @Override
   @Transactional
   public ResponseEntity<BookingResponse> makeBooking(Booking booking) {
     try {
-      MessageDTO message = new MessageDTO();
-      message.setDestination("listing.queue");
-      message.setCommand("updateListingForBook");
-      message.setSource("booking.queue");
-
-      publisher.sendMessage(message);
+      // Dispatch event here
 
       BookingResponse response = new BookingResponse();
       response.setMESSAGE("STAY BOOKED SUCCESSFULLY");
       response.setSTATUS(BookingResponse.STATUS.SUCCESS);
-
-      bookingDao.save(booking);
-
       return ResponseEntity.ok(response);
     } catch (Exception e) {
       BookingResponse response = new BookingResponse();

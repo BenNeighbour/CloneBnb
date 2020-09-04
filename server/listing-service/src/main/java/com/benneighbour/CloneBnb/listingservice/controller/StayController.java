@@ -27,15 +27,15 @@ public class StayController {
     this.dao = dao;
   }
 
-  // Get a stay by it's id
-  @GetMapping("listing/stay/by/{id}")
-  public Stay findStayById(@PathVariable("id") UUID id) {
+  // Get a stay by it's listingId
+  @GetMapping("listing/stay/by/{listingId}")
+  public Stay findStayById(@PathVariable("listingId") UUID id) {
     return dao.findStayById(id);
   }
 
   // Get the user stays
-  @GetMapping("listing/stay/by/user/{id}")
-  public ResponseEntity<List<Stay>> getUserStays(@PathVariable("id") UUID id) {
+  @GetMapping("listing/stay/by/user/{listingId}")
+  public ResponseEntity<List<Stay>> getUserStays(@PathVariable("listingId") UUID id) {
     List<Stay> stays = dao.findAllStaysByUserId(id);
 
     return ResponseEntity.ok(stays);
