@@ -21,7 +21,7 @@ public class CreateListingSaga {
 
   @StartSaga
   @SagaEventHandler(associationProperty = "listingId")
-  public void handle(ListingCreatedEvent event) throws Exception {
+  public void handle(ListingCreatedEvent event) {
     SagaLifecycle.associateWith("listingId", event.getListingId().toString());
     System.out.println("Create listing saga started!");
 

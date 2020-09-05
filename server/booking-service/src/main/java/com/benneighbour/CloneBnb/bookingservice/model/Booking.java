@@ -35,8 +35,8 @@ public class Booking implements Serializable {
     @Id
     @GeneratedValue
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    @Column(columnDefinition = "uuid", updatable = false)
-    private UUID id;
+    @Column(columnDefinition = "uuid", updatable = false, name = "id")
+    private UUID bookingId;
 
     @Column(name = "listing_id")
     private UUID listingId;
