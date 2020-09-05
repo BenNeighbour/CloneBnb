@@ -55,7 +55,7 @@ public class BookingServiceImpl implements BookingService {
   @Override
   public ResponseEntity<BookingResponse> deleteBooking(UUID bookingId) {
     try {
-      Booking bookingToRemove = bookingDao.findBookingById(bookingId);
+      Booking bookingToRemove = bookingDao.findBookingByBookingId(bookingId);
       bookingDao.delete(bookingToRemove);
 
       BookingResponse response = new BookingResponse();

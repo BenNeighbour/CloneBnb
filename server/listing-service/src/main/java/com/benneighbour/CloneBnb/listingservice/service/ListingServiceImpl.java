@@ -2,7 +2,9 @@ package com.benneighbour.CloneBnb.listingservice.service;
 
 import com.benneighbour.CloneBnb.commonlibrary.command.CreateListingCommand;
 import com.benneighbour.CloneBnb.listingservice.dao.ListingDao;
+import com.benneighbour.CloneBnb.listingservice.dao.StayDao;
 import com.benneighbour.CloneBnb.listingservice.model.Listing;
+import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import org.apache.commons.beanutils.BeanUtils;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.stereotype.Service;
@@ -21,11 +23,15 @@ public class ListingServiceImpl implements ListingService {
 
   private final ListingDao dao;
 
+  private final StayDao stayDao;
+
   private final CommandGateway gateway;
 
-  public ListingServiceImpl(final ListingDao dao, final CommandGateway gateway) {
+  public ListingServiceImpl(
+      final ListingDao dao, final CommandGateway gateway, final StayDao stayDao) {
     this.dao = dao;
     this.gateway = gateway;
+    this.stayDao = stayDao;
   }
 
   @Override
@@ -69,18 +75,25 @@ public class ListingServiceImpl implements ListingService {
   }
 
   @Override
-  public Listing saveListingFromCommand(CreateListingCommand command) throws IllegalAccessException, InvocationTargetException, Exception {
+  public void saveListingFromCommand(CreateListingCommand command)
+      throws IllegalAccessException, InvocationTargetException, Exception {
     Listing listing = new Listing();
     BeanUtils.copyProperties(listing, command);
 
-    return dao.save(listing);
+    dao.save(listing);
   }
 
   private void copyObject(Listing src, CreateListingCommand dest)
-          throws IllegalArgumentException, IllegalAccessException,
-          NoSuchFieldException, SecurityException {
+      throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException,
+          SecurityException {
     for (Field field : src.getClass().getFields()) {
-      if (!field.getName().equals("serialVersionUID") && !field.getName().equals("listingId")) dest.getClass().getField(field.getName()).set(dest, field.get(src));
+      if (!field.getName().equals("serialVersionUID") && !field.getName().equals("listingId"))
+        dest.getClass().getField(field.getName()).set(dest, field.get(src));
     }
+  }
+
+  @Override
+  public void createStay(Stay stay) {
+    stayDao.save(stay);
   }
 }

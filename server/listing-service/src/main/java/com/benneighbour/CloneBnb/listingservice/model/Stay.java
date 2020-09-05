@@ -17,7 +17,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "Stay")
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonSerialize(include= JsonSerialize.Inclusion.NON_EMPTY)
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
 public class Stay implements Serializable {
 
   private static final long serialVersionUID = 6245537566711698920L;
@@ -25,8 +25,8 @@ public class Stay implements Serializable {
   @Id
   @GeneratedValue
   @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-  @Column(columnDefinition = "uuid", updatable = false)
-  private UUID id;
+  @Column(columnDefinition = "uuid", updatable = false, name = "id")
+  private UUID stayId;
 
   @Column(name = "checkInDate")
   private LocalDate checkInDate;
@@ -70,12 +70,12 @@ public class Stay implements Serializable {
     this.userId = userId;
   }
 
-  public UUID getId() {
-    return id;
+  public UUID getStayId() {
+    return stayId;
   }
 
-  public void setId(UUID id) {
-    this.id = id;
+  public void setStayId(UUID stayId) {
+    this.stayId = stayId;
   }
 
   public Listing getListing() {

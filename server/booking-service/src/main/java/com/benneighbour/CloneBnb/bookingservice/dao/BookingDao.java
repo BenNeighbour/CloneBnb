@@ -17,7 +17,7 @@ import java.util.UUID;
 @Transactional
 public interface BookingDao extends JpaRepository<Booking, UUID> {
 
-    Booking findBookingById(UUID id);
+    Booking findBookingByBookingId(UUID bookingId);
 
     List<Booking> findAllBookingsByListingId(UUID listingId);
 
