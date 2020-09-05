@@ -7,18 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="saga-service" />
+        <module name="discovery-service" />
         <module name="gateway-service" />
         <module name="common-library" />
         <module name="listing-service" />
         <module name="booking-service" />
-        <module name="discovery-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="authentication-service" target="1.8" />
       <module name="event-library" target="1.8" />
       <module name="saga-event-service" target="1.8" />
+      <module name="saga-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

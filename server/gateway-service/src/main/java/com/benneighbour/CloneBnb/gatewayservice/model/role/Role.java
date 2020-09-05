@@ -17,7 +17,7 @@ public class Role implements Serializable {
 
   @Id
   @GeneratedValue(generator = "uuid2")
-  @Column(name = "listingId")
+  @Column(name = "id")
   private UUID id;
 
   @Column(name = "type")

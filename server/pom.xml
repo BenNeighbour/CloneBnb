@@ -14,6 +14,5 @@
         <module>discovery-service</module>
         <module>listing-service</module>
         <module>common-library</module>
-        <module>saga-service</module>
     </modules>
 </project>

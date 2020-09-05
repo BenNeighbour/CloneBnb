@@ -7,7 +7,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/saga-event-service/pom.xml" />
         <option value="$PROJECT_DIR$/common-library/pom.xml" />
-        <option value="$PROJECT_DIR$/saga-service/pom.xml" />
         <option value="$PROJECT_DIR$/booking-service/pom.xml" />
       </list>
     </option>
