@@ -75,12 +75,12 @@ public class ListingServiceImpl implements ListingService {
   }
 
   @Override
-  public void saveListingFromCommand(CreateListingCommand command)
+  public Listing saveListingFromCommand(CreateListingCommand command)
       throws IllegalAccessException, InvocationTargetException, Exception {
     Listing listing = new Listing();
     BeanUtils.copyProperties(listing, command);
 
-    dao.save(listing);
+    return dao.save(listing);
   }
 
   private void copyObject(Listing src, CreateListingCommand dest)
@@ -93,7 +93,7 @@ public class ListingServiceImpl implements ListingService {
   }
 
   @Override
-  public void createStay(Stay stay) {
-    stayDao.save(stay);
+  public Stay createStay(Stay stay) {
+    return stayDao.save(stay);
   }
 }

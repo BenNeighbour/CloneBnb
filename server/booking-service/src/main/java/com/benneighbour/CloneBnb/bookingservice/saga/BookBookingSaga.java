@@ -11,6 +11,7 @@ import org.axonframework.modelling.saga.StartSaga;
 import org.axonframework.spring.stereotype.Saga;
 
 import javax.inject.Inject;
+import java.util.UUID;
 
 /**
  * @author Ben Neighbour
@@ -25,11 +26,12 @@ public class BookBookingSaga {
   @StartSaga
   @SagaEventHandler(associationProperty = "bookingId")
   public void handle(BookingCreatedEvent event) throws Exception {
-    SagaLifecycle.associateWith("bookingId", event.getListingId().toString());
+    SagaLifecycle.associateWith("bookingId", event.getBookingId().toString());
     System.out.println("Book booking saga started!");
 
     try {
       CreateStayCommand createStay = new CreateStayCommand();
+//      createStay.setStayId(UUID.randomUUID());
 
       // Create the stay between the dates of the booking
       BeanUtils.copyProperties(createStay, event);

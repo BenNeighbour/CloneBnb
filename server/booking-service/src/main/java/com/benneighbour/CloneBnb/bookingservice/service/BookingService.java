@@ -18,4 +18,6 @@ public interface BookingService {
   ResponseEntity<BookingResponse> deleteBooking(UUID bookingId);
 
   ResponseEntity<BookingResponse> checkBookingAvailability(Booking booking);
+
+  Booking saveBooking(Booking booking);
 }

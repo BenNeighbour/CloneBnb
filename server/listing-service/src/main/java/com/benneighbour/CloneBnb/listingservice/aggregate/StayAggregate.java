@@ -44,7 +44,7 @@ public class StayAggregate implements Serializable {
 
   private LocalDate checkOutDate;
 
-  private boolean finished = false;
+  private boolean finished;
 
   private UUID userId;
 
@@ -61,18 +61,17 @@ public class StayAggregate implements Serializable {
 
   @CommandHandler
   public StayAggregate(CreateStayCommand command, @Autowired ListingService service) {
-    // Actually create the listing before issuing a created event
-    try {
-      Stay stay = new Stay();
+    Stay stay = new Stay();
 
+    try {
       BeanUtils.copyProperties(stay, command);
-      service.createStay(stay);
+      stay = service.createStay(stay);
     } catch (Exception e) {
       e.printStackTrace();
     }
 
     StayCreatedEvent event = new StayCreatedEvent(command);
-    event.setListingId(UUID.randomUUID());
+    event.setStayId(stay.getStayId());
     AggregateLifecycle.apply(event);
   }
 }

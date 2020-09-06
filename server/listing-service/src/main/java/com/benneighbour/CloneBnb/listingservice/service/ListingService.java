@@ -20,8 +20,8 @@ public interface ListingService {
     void reflectionHelper(Object from, Object to) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException,
             SecurityException;
 
-    void saveListingFromCommand(CreateListingCommand command) throws IllegalAccessException, InvocationTargetException, Exception;
+    Listing saveListingFromCommand(CreateListingCommand command) throws IllegalAccessException, InvocationTargetException, Exception;
 
-    void createStay(Stay stay);
+    Stay createStay(Stay stay);
 
 }

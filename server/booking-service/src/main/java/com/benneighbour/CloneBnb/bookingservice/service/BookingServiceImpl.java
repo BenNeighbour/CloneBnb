@@ -76,4 +76,9 @@ public class BookingServiceImpl implements BookingService {
   public ResponseEntity<BookingResponse> checkBookingAvailability(Booking booking) {
     return null;
   }
+
+  @Override
+  public Booking saveBooking(Booking booking) {
+    return bookingDao.save(booking);
+  }
 }

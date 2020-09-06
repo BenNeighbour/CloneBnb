@@ -1,6 +1,5 @@
 package com.benneighbour.CloneBnb.listingservice.dao;
 
-import com.benneighbour.CloneBnb.listingservice.model.Listing;
 import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -16,7 +15,7 @@ import java.util.UUID;
 @Repository
 public interface StayDao extends JpaRepository<Stay, UUID> {
 
-  Stay findStayById(UUID id);
+  Stay findStayByStayId(UUID id);
 
   List<Stay> findAllStaysByUserId(UUID userId);
 

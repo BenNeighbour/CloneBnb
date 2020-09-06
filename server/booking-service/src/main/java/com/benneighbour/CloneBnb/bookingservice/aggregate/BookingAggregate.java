@@ -12,6 +12,7 @@ import lombok.Setter;
 import org.apache.commons.beanutils.BeanUtils;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
+import org.axonframework.modelling.command.AggregateIdentifier;
 import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,7 @@ public class BookingAggregate implements Serializable {
 
   private static final long serialVersionUID = -6941155413163906644L;
 
+  @AggregateIdentifier(routingKey = "bookingId")
   private UUID bookingId;
 
   private UUID listingId;
@@ -63,13 +65,13 @@ public class BookingAggregate implements Serializable {
 
     try {
       BeanUtils.copyProperties(booking, command);
-      service.makeBooking(booking);
+      booking = service.saveBooking(booking);
     } catch (Exception e) {
       e.printStackTrace();
     }
 
     BookingCreatedEvent event = new BookingCreatedEvent(command);
-    event.setBookingId(UUID.randomUUID());
+    event.setBookingId(booking.getBookingId());
     AggregateLifecycle.apply(event);
   }
 }

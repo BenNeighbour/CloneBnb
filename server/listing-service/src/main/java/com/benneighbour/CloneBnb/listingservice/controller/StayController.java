@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -30,7 +29,7 @@ public class StayController {
   // Get a stay by it's listingId
   @GetMapping("listing/stay/by/{listingId}")
   public Stay findStayById(@PathVariable("listingId") UUID id) {
-    return dao.findStayById(id);
+    return dao.findStayByStayId(id);
   }
 
   // Get the user stays

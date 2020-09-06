@@ -6,6 +6,7 @@ import com.benneighbour.CloneBnb.commonlibrary.model.Amenity;
 import com.benneighbour.CloneBnb.commonlibrary.model.ListingStatus;
 import com.benneighbour.CloneBnb.listingservice.common.GlobalDao;
 import com.benneighbour.CloneBnb.listingservice.common.User;
+import com.benneighbour.CloneBnb.listingservice.model.Listing;
 import com.benneighbour.CloneBnb.listingservice.service.ListingService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -89,14 +90,16 @@ public class ListingAggregate implements Serializable {
   @CommandHandler
   public ListingAggregate(CreateListingCommand command, @Autowired ListingService service) {
     // Actually create the listing before issuing a created event
+    Listing listing = new Listing();
+
     try {
-      service.saveListingFromCommand(command);
+      listing = service.saveListingFromCommand(command);
     } catch (Exception e) {
       e.printStackTrace();
     }
 
     ListingCreatedEvent event = new ListingCreatedEvent(command);
-    event.setListingId(UUID.randomUUID());
+    event.setListingId(listing.getListingId());
     AggregateLifecycle.apply(event);
   }
 }
