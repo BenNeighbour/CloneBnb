@@ -63,33 +63,12 @@ public class ListingServiceImpl implements ListingService {
   }
 
   @Override
-  public void reflectionHelper(Object src, Object dest)
-      throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException,
-          SecurityException {
-    for (Field field : src.getClass().getFields()) {
-      if (!field.getName().equals("serialVersionUID") && !field.getName().equals("listingId")) {
-        Field destField = dest.getClass().getField(field.getName());
-        System.out.println(destField.getName());
-      }
-    }
-  }
-
-  @Override
   public Listing saveListingFromCommand(CreateListingCommand command)
       throws IllegalAccessException, InvocationTargetException, Exception {
     Listing listing = new Listing();
     BeanUtils.copyProperties(listing, command);
 
     return dao.save(listing);
-  }
-
-  private void copyObject(Listing src, CreateListingCommand dest)
-      throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException,
-          SecurityException {
-    for (Field field : src.getClass().getFields()) {
-      if (!field.getName().equals("serialVersionUID") && !field.getName().equals("listingId"))
-        dest.getClass().getField(field.getName()).set(dest, field.get(src));
-    }
   }
 
   @Override
