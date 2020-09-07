@@ -32,6 +32,8 @@ public class Stay implements Serializable {
 
   private UUID userId;
 
+  private UUID bookingId;
+
   private Listing listing;
 
   public Stay() {}
@@ -82,6 +84,14 @@ public class Stay implements Serializable {
 
   public void setFinished(boolean finished) {
     this.finished = finished;
+  }
+
+  public UUID getBookingId() {
+    return bookingId;
+  }
+
+  public void setBookingId(UUID bookingId) {
+    this.bookingId = bookingId;
   }
 }
 

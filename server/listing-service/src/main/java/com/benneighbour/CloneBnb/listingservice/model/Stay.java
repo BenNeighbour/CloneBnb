@@ -41,6 +41,9 @@ public class Stay implements Serializable {
   @Column(name = "userId")
   private UUID userId;
 
+  @Column(name = "bookingId")
+  private UUID bookingId;
+
   @ManyToOne(cascade = CascadeType.ALL, targetEntity = Listing.class, fetch = FetchType.LAZY)
   private Listing listing;
 
@@ -92,5 +95,13 @@ public class Stay implements Serializable {
 
   public void setFinished(boolean finished) {
     this.finished = finished;
+  }
+
+  public UUID getBookingId() {
+    return bookingId;
+  }
+
+  public void setBookingId(UUID bookingId) {
+    this.bookingId = bookingId;
   }
 }

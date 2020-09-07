@@ -5,6 +5,7 @@ import com.benneighbour.CloneBnb.bookingservice.model.BookingResponse;
 import org.springframework.http.ResponseEntity;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @author Ben Neighbour
@@ -13,7 +14,7 @@ import java.util.UUID;
  */
 public interface BookingService {
 
-  ResponseEntity<BookingResponse> makeBooking(Booking booking);
+  CompletableFuture<String> makeBooking(Booking booking);
 
   ResponseEntity<BookingResponse> deleteBooking(UUID bookingId);
 

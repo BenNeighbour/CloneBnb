@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @author Ben Neighbour
@@ -29,7 +30,7 @@ public class BookingServiceImpl implements BookingService {
   }
 
   @Override
-  public ResponseEntity<BookingResponse> makeBooking(Booking booking) {
+  public CompletableFuture<String> makeBooking(Booking booking) {
     try {
       // TODO: Run check availability helper function
 
@@ -37,18 +38,19 @@ public class BookingServiceImpl implements BookingService {
       CreateBookingCommand command = new CreateBookingCommand();
       BeanUtils.copyProperties(command, booking);
 
-      gateway.send(command);
+      return gateway.send(command);
 
-      BookingResponse response = new BookingResponse();
-      response.setMESSAGE("STAY BOOKED SUCCESSFULLY");
-      response.setSTATUS(BookingResponse.STATUS.SUCCESS);
-      return ResponseEntity.ok(response);
+//      BookingResponse response = new BookingResponse();
+//      response.setMESSAGE("STAY BOOKED SUCCESSFULLY");
+//      response.setSTATUS(BookingResponse.STATUS.SUCCESS);
+//      return ResponseEntity.ok(response);
     } catch (Exception e) {
       BookingResponse response = new BookingResponse();
       response.setMESSAGE("UNABLE TO BOOK STAY");
       response.setSTATUS(BookingResponse.STATUS.ERROR);
 
-      return ResponseEntity.badRequest().body(response);
+      // TODO: Throw exception up the callstack
+      return null;
     }
   }
 

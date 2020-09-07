@@ -29,6 +29,8 @@ public class CreateStayCommand implements Serializable {
 
   private LocalDate checkOutDate;
 
+  private UUID bookingId;
+
   private boolean finished = false;
 
   private UUID userId;
@@ -42,5 +44,6 @@ public class CreateStayCommand implements Serializable {
     this.finished = command.isFinished();
     this.userId = command.getUserId();
     this.listingId = command.getListingId();
+    this.bookingId = command.getBookingId();
   }
 }

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * @author Ben Neighbour
  * @created 31/08/2020
@@ -25,7 +27,7 @@ public class BookingController {
     }
 
     @PostMapping("booking/book")
-    public ResponseEntity<BookingResponse> book(@RequestBody Booking booking) {
+    public CompletableFuture<String> book(@RequestBody Booking booking) {
         return service.makeBooking(booking);
     }
 
