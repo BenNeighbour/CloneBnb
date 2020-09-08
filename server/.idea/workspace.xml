@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad0c23c6-da96-48c3-921c-8a232756efa3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="ad0c23c6-da96-48c3-921c-8a232756efa3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/gateway-service/target/" />
@@ -48,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/saga/CreateListingSaga.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -76,8 +72,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+                <state relative-caret-position="142">
+                  <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -662,6 +658,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1296" height="1040" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5017361" side_tool="true" weight="0.3001618" />
       <window_info id="Image Layers" order="1" />
@@ -1177,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/saga/CreateListingSaga.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1187,8 +1184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/listing-service/src/main/java/com/benneighbour/CloneBnb/listingservice/service/ListingServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+        <state relative-caret-position="142">
+          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
