@@ -1,6 +1,5 @@
 package com.benneighbour.CloneBnb.listingservice.controller;
 
-import com.benneighbour.CloneBnb.listingservice.aggregate.ListingAggregate;
 import com.benneighbour.CloneBnb.listingservice.common.GlobalDao;
 import com.benneighbour.CloneBnb.listingservice.model.Listing;
 import com.benneighbour.CloneBnb.listingservice.model.ListingSpecificationBuilder;
@@ -38,6 +37,11 @@ public class ListingController {
 
   @GetMapping("internal/by/{listingId}")
   public Listing findListingById(@PathVariable("listingId") UUID id) {
+    return dao.getListingById(id);
+  }
+
+  @GetMapping("listing/by/{listingId}")
+  public Listing findListingByIdExternal(@PathVariable("listingId") UUID id) {
     return dao.getListingById(id);
   }
 

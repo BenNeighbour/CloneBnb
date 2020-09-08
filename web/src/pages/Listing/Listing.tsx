@@ -5,10 +5,22 @@ import Navigation from "./../../components/Navigation/Navigation";
 import Grid from "@material-ui/core/Grid";
 import BookingCard from "./../../components/Listing/BookingCard";
 import MainSection from "./../../components/Listing/MainSection";
+import { LISTING_PAGE } from "./../../util/api/AJAX";
 
 interface Props extends RouteComponentProps<any> {}
 
 const Listing: React.FC<Props> = (props) => {
+  const [listing, setListing]: any = React.useState({});
+
+  React.useEffect(() => {
+    // Make a request to get the listing by that id
+    LISTING_PAGE(props.match.params.listingId).then((response: any) => {
+      setListing(response.data);
+    }).catch((error: any) => {
+      props.history.goBack();
+    });
+  }, [props]);
+
   return (
     <div
       style={{
@@ -64,12 +76,12 @@ const Listing: React.FC<Props> = (props) => {
                 paddingBottom: 0,
               }}
             >
-              <MainSection
+              {listing !== undefined ? <MainSection
                 location={props.location}
                 match={props.match}
                 history={props.history}
-                title="Cool Apartment"
-              />
+                listing={listing}
+              /> : undefined}
             </Grid>
             <Grid item xs={12} sm={5} className="stickyCard">
               <BookingCard
@@ -78,9 +90,7 @@ const Listing: React.FC<Props> = (props) => {
                 match={props.match}
               />
             </Grid>
-
           </Grid>
-          
         </div>
       </Container>
     </div>

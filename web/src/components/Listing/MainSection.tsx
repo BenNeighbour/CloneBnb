@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 
 interface Props extends RouteComponentProps<any> {
-  title: string;
+  listing: any;
 }
 
 const MainSection: React.FC<Props> = (props) => {
@@ -21,7 +21,7 @@ const MainSection: React.FC<Props> = (props) => {
           fontWeight: "normal",
         }}
       >
-        {props.title}
+        {props.listing.name}
       </h2>
       <Grid
         item
@@ -31,7 +31,7 @@ const MainSection: React.FC<Props> = (props) => {
           paddingTop: 0,
         }}
       >
-        <p>xcvcxx</p>
+        <p>{props.listing.longDescription}</p>
         <br />
         <Divider />
         <br />

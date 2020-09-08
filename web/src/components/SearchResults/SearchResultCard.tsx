@@ -1,21 +1,21 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import CardContent from '@material-ui/core/CardContent';
-import Card from '@material-ui/core/Card';
-import StarBorderRoundedIcon from '@material-ui/icons/StarBorderRounded';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
+import CardContent from "@material-ui/core/CardContent";
+import Card from "@material-ui/core/Card";
+import StarBorderRoundedIcon from "@material-ui/icons/StarBorderRounded";
+import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
+import Grid from "@material-ui/core/Grid";
 
 interface Props extends RouteComponentProps<any> {
-    listing: any;
+  listing: any;
 }
 
 const SearchResultCard: React.FC<Props> = (props) => {
   return (
     <Card
       onClick={() => {
-        props.history.push("/listing/ccd30e15-4176-4564-b1a9-bdcf20ab1b99");
+        props.history.push(`/listing/${props.listing.listingId}`);
       }}
       className="listing"
       elevation={0}
@@ -75,8 +75,9 @@ const SearchResultCard: React.FC<Props> = (props) => {
               }}
             />
             <Typography variant="body2" component="p">
-              {props.listing.numberOfGuests} guests &bull; {props.listing.numberOfBedrooms}{" "}
-              bedrooms &bull; {props.listing.numberOfBeds} beds &bull;{" "}
+              {props.listing.numberOfGuests} guests &bull;{" "}
+              {props.listing.numberOfBedrooms} bedrooms &bull;{" "}
+              {props.listing.numberOfBeds} beds &bull;{" "}
               {props.listing.numberOfBathrooms} bathrooms
               <br />
               Amenities &bull; in &bull; the &bull; same &bull; format

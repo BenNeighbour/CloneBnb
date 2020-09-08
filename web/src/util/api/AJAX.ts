@@ -27,3 +27,10 @@ export function LISTING_SEARCH(params: Array<string>): any {
     extraRequestHeaders
   )
 }
+
+export function LISTING_PAGE(listingId: number): any { 
+  return axios.get(
+    `${Constants.SERVER_BASE_ROUTE}/listing/by/${listingId}`,
+    extraRequestHeaders
+  )
+}
