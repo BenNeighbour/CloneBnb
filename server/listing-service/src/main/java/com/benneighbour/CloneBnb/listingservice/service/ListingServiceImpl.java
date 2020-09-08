@@ -9,7 +9,6 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.CompletableFuture;
 
@@ -40,20 +39,22 @@ public class ListingServiceImpl implements ListingService {
       CreateListingCommand createListing = new CreateListingCommand();
 
       // TODO: CLEAN THIS UP!!!!!!!
-      createListing.setAddress(listing.getAddress());
-      createListing.setName(listing.getName());
-      createListing.setAverageStars(listing.getAverageStars());
-      createListing.setDescription(listing.getDescription());
-      createListing.setLongDescription(listing.getLongDescription());
-      createListing.setLocation(listing.getLocation());
-      createListing.setNumberOfBathrooms(listing.getNumberOfBathrooms());
-      createListing.setNumberOfBedrooms(listing.getNumberOfBedrooms());
-      createListing.setNumberOfBeds(listing.getNumberOfBeds());
-      createListing.setNumberOfGuests(listing.getNumberOfGuests());
-      createListing.setOwnerId(listing.getOwnerId());
-      createListing.setPricePerNight(listing.getPricePerNight());
-      createListing.setThumbnailUrl(listing.getThumbnailUrl());
-      createListing.setType(CreateListingCommand.PropertyType.Apartment);
+      //      createListing.setAddress(listing.getAddress());
+      //      createListing.setName(listing.getName());
+      //      createListing.setAverageStars(listing.getAverageStars());
+      //      createListing.setDescription(listing.getDescription());
+      //      createListing.setLongDescription(listing.getLongDescription());
+      //      createListing.setLocation(listing.getLocation());
+      //      createListing.setNumberOfBathrooms(listing.getNumberOfBathrooms());
+      //      createListing.setNumberOfBedrooms(listing.getNumberOfBedrooms());
+      //      createListing.setNumberOfBeds(listing.getNumberOfBeds());
+      //      createListing.setNumberOfGuests(listing.getNumberOfGuests());
+      //      createListing.setOwnerId(listing.getOwnerId());
+      //      createListing.setPricePerNight(listing.getPricePerNight());
+      //      createListing.setThumbnailUrl(listing.getThumbnailUrl());
+      //      createListing.setType(CreateListingCommand.PropertyType.Apartment);
+
+      BeanUtils.copyProperties(createListing, listing);
 
       return gateway.send(createListing);
     } catch (Exception e) {
