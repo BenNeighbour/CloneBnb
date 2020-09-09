@@ -4,6 +4,7 @@ import com.benneighbour.CloneBnb.bookingservice.model.Booking;
 import com.benneighbour.CloneBnb.bookingservice.model.BookingResponse;
 import org.springframework.http.ResponseEntity;
 
+import java.time.LocalDate;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
@@ -18,7 +19,7 @@ public interface BookingService {
 
   ResponseEntity<BookingResponse> deleteBooking(UUID bookingId);
 
-  ResponseEntity<BookingResponse> checkBookingAvailability(Booking booking);
-
   Booking saveBooking(Booking booking);
+
+  boolean isBookingAvailable(LocalDate checkInDate, LocalDate checkOutDate, UUID listingId);
 }
