@@ -48,8 +48,7 @@ public class Listing implements Serializable {
 
   @ElementCollection(fetch = FetchType.LAZY)
   @JoinTable(name = "amenity", joinColumns = @JoinColumn(name = "listing_id"))
-  @Column(name = "amenity", nullable = false)
-  @Enumerated(EnumType.STRING)
+  @Enumerated(EnumType.ORDINAL)
   public List<Amenity> amenities;
 
   @Column(name = "type", nullable = false)

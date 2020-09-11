@@ -14,11 +14,13 @@ const Listing: React.FC<Props> = (props) => {
 
   React.useEffect(() => {
     // Make a request to get the listing by that id
-    LISTING_PAGE(props.match.params.listingId).then((response: any) => {
-      setListing(response.data);
-    }).catch((error: any) => {
-      props.history.goBack();
-    });
+    LISTING_PAGE(props.match.params.listingId)
+      .then((response: any) => {
+        setListing(response.data);
+      })
+      .catch((error: any) => {
+        props.history.goBack();
+      });
   }, [props]);
 
   return (
@@ -66,7 +68,15 @@ const Listing: React.FC<Props> = (props) => {
             />
           </div>
 
-          <Grid container direction="row" alignItems="stretch" spacing={9}>
+          <Grid
+            container
+            direction="row"
+            alignItems="stretch"
+            spacing={9}
+            style={{
+              margin: "none",
+            }}
+          >
             <Grid
               item
               xs={12}
@@ -76,12 +86,14 @@ const Listing: React.FC<Props> = (props) => {
                 paddingBottom: 0,
               }}
             >
-              {listing !== undefined ? <MainSection
-                location={props.location}
-                match={props.match}
-                history={props.history}
-                listing={listing}
-              /> : undefined}
+              {listing !== undefined ? (
+                <MainSection
+                  location={props.location}
+                  match={props.match}
+                  history={props.history}
+                  listing={listing}
+                />
+              ) : undefined}
             </Grid>
             <Grid item xs={12} sm={5} className="stickyCard">
               <BookingCard
