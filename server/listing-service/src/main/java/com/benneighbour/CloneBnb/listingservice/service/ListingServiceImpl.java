@@ -2,11 +2,14 @@ package com.benneighbour.CloneBnb.listingservice.service;
 
 import com.benneighbour.CloneBnb.commonlibrary.command.CreateListingCommand;
 import com.benneighbour.CloneBnb.listingservice.dao.ListingDao;
+import com.benneighbour.CloneBnb.listingservice.dao.ReviewDao;
 import com.benneighbour.CloneBnb.listingservice.dao.StayDao;
 import com.benneighbour.CloneBnb.listingservice.model.Listing;
+import com.benneighbour.CloneBnb.listingservice.model.Review;
 import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import org.apache.commons.beanutils.BeanUtils;
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.InvocationTargetException;
@@ -26,34 +29,20 @@ public class ListingServiceImpl implements ListingService {
 
   private final CommandGateway gateway;
 
+  private final ReviewDao reviewDao;
+
   public ListingServiceImpl(
-      final ListingDao dao, final CommandGateway gateway, final StayDao stayDao) {
+      final ListingDao dao, final CommandGateway gateway, final StayDao stayDao, final ReviewDao reviewDao) {
     this.dao = dao;
     this.gateway = gateway;
     this.stayDao = stayDao;
+    this.reviewDao = reviewDao;
   }
 
   @Override
   public CompletableFuture<Listing> createListing(Listing listing) {
     try {
       CreateListingCommand createListing = new CreateListingCommand();
-
-      // TODO: CLEAN THIS UP!!!!!!!
-      //      createListing.setAddress(listing.getAddress());
-      //      createListing.setName(listing.getName());
-      //      createListing.setAverageStars(listing.getAverageStars());
-      //      createListing.setDescription(listing.getDescription());
-      //      createListing.setLongDescription(listing.getLongDescription());
-      //      createListing.setLocation(listing.getLocation());
-      //      createListing.setNumberOfBathrooms(listing.getNumberOfBathrooms());
-      //      createListing.setNumberOfBedrooms(listing.getNumberOfBedrooms());
-      //      createListing.setNumberOfBeds(listing.getNumberOfBeds());
-      //      createListing.setNumberOfGuests(listing.getNumberOfGuests());
-      //      createListing.setOwnerId(listing.getOwnerId());
-      //      createListing.setPricePerNight(listing.getPricePerNight());
-      //      createListing.setThumbnailUrl(listing.getThumbnailUrl());
-      //      createListing.setType(CreateListingCommand.PropertyType.Apartment);
-
       BeanUtils.copyProperties(createListing, listing);
 
       return gateway.send(createListing);
@@ -75,5 +64,10 @@ public class ListingServiceImpl implements ListingService {
   @Override
   public Stay createStay(Stay stay) {
     return stayDao.save(stay);
+  }
+
+  @Override
+  public ResponseEntity<Review> postReview(Review review) {
+    return ResponseEntity.ok(reviewDao.save(review));
   }
 }

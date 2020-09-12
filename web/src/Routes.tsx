@@ -17,6 +17,7 @@ const Routes: React.FC<Props> = (props) => {
           <Route component={Home} exact path="/home" />
           <Route component={Search} exact path="/search" />
           <Route component={Listing} exact path="/listing/:listingId" />
+          <Route component={undefined} exact path="/profile/reviews"  />
         </Route>
       </Switch>
     </Route>
