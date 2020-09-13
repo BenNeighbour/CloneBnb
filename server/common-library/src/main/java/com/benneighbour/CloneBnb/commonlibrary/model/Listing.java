@@ -19,7 +19,7 @@ public class Listing implements Serializable {
   private static final long serialVersionUID = 8096657782794609195L;
 
   @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-  private UUID id;
+  private UUID listingId;
 
   private String name;
 
@@ -53,12 +53,12 @@ public class Listing implements Serializable {
 
   public Listing() {}
 
-  public UUID getId() {
-    return id;
+  public UUID getListingId() {
+    return listingId;
   }
 
-  public void setId(UUID id) {
-    this.id = id;
+  public void setListingId(UUID listingId) {
+    this.listingId = listingId;
   }
 
   public String getName() {

@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="listing-service" />
-        <module name="gateway-service" />
-        <module name="discovery-service" />
-        <module name="common-library" />
         <module name="booking-service" />
+        <module name="gateway-service" />
+        <module name="common-library" />
+        <module name="discovery-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

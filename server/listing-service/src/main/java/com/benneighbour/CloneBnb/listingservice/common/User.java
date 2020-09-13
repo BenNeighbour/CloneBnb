@@ -1,13 +1,12 @@
 package com.benneighbour.CloneBnb.listingservice.common;
 
-import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -15,6 +14,8 @@ import java.util.UUID;
  * @created 07/08/2020
  * @project CloneBnb
  */
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class User implements Serializable {
 
   private static final long serialVersionUID = -2229916935310862092L;
@@ -30,9 +31,6 @@ public class User implements Serializable {
 
   @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   private Date dateOfBirth;
-
-  @JsonInclude(JsonInclude.Include.NON_NULL)
-  private List<Stay> stays;
 
   @JsonIgnore
   private Boolean accountEnabled = false;
@@ -150,13 +148,5 @@ public class User implements Serializable {
 
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
-  }
-
-  public List<Stay> getStays() {
-    return stays;
-  }
-
-  public void setStays(List<Stay> stays) {
-    this.stays = stays;
   }
 }

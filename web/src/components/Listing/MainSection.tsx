@@ -48,18 +48,15 @@ const MainSection: React.FC<Props> = (props) => {
           }}
         >
           {/* Iterate over reviews here */}
-          <Review
-            location={props.location}
-            match={props.match}
-            history={props.history}
-            review={null}
-          />
-          <Review
-            location={props.location}
-            match={props.match}
-            history={props.history}
-            review={null}
-          />
+          {props.listing.reviews !== undefined ? props.listing.reviews.map((review: any, index: number) => (
+            <Review
+              key={index}
+              location={props.location}
+              match={props.match}
+              history={props.history}
+              review={review}
+            />
+          )) : undefined}
         </Grid>
       </Grid>
     </div>

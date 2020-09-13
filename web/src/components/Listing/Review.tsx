@@ -15,13 +15,16 @@ const Review: React.FC<Props> = (props) => {
     <Grid item xs={12}>
       <Card
         style={{
-          boxShadow:  "none",
+          boxShadow: "none",
         }}
       >
         <CardHeader
-          avatar={<Avatar>R</Avatar>}
-          title="Reviewer's Name"
-          subheader="September 14, 2016"
+          avatar={<Avatar style={{
+            padding: 0,
+            margin: 0
+          }}>R</Avatar>}
+          title={props.review.reviewer.username}
+          subheader={`${props.review.stars} stars`}
           action={null}
         />
         <CardContent
@@ -31,13 +34,7 @@ const Review: React.FC<Props> = (props) => {
           }}
         >
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
-            laboriosam, illo numquam consectetur aliquid velit. Laudantium neque
-            voluptas tempore nemo sequi deleniti illo, soluta reprehenderit
-            officia unde veniam dolore dolorum. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Expedita nisi neque tempora eos dolore
-            itaque animi recusandae earum velit, atque corporis perferendis
-            tempore dicta ipsam sint ducimus quia, eum eaque.
+            {props.review.comment}
           </p>
         </CardContent>
       </Card>

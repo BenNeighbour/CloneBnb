@@ -47,6 +47,9 @@ public class Stay implements Serializable {
   @ManyToOne(cascade = CascadeType.ALL, targetEntity = Listing.class, fetch = FetchType.LAZY)
   private Listing listing;
 
+  @OneToOne(cascade = CascadeType.ALL, targetEntity = Review.class, fetch = FetchType.LAZY)
+  private Review review;
+
   public Stay() {}
 
   public LocalDate getCheckInDate() {
@@ -103,5 +106,13 @@ public class Stay implements Serializable {
 
   public void setBookingId(UUID bookingId) {
     this.bookingId = bookingId;
+  }
+
+  public Review getReview() {
+    return review;
+  }
+
+  public void setReview(Review review) {
+    this.review = review;
   }
 }

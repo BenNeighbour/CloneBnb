@@ -29,58 +29,61 @@ public class Listing implements Serializable {
   @GeneratedValue
   @JsonProperty(access = JsonProperty.Access.READ_ONLY)
   @Column(columnDefinition = "uuid", updatable = false, name = "id")
-  public UUID listingId;
+  private UUID listingId;
 
   @Column(name = "name", nullable = false)
-  public String name;
+  private String name;
 
   @Column(name = "description", nullable = false)
-  public String description;
+  private String description;
 
   @Column(name = "longDescription", nullable = false)
-  public String longDescription;
+  private String longDescription;
 
   @Column(name = "location", nullable = false)
-  public String location;
+  private String location;
 
   @Column(name = "address", nullable = false)
-  public String address;
+  private String address;
 
   @ElementCollection(fetch = FetchType.LAZY)
   @JoinTable(name = "amenity", joinColumns = @JoinColumn(name = "listing_id"))
   @Enumerated(EnumType.ORDINAL)
-  public List<Amenity> amenities;
+  private List<Amenity> amenities;
 
   @Column(name = "type", nullable = false)
-  public CreateListingCommand.PropertyType type;
+  private CreateListingCommand.PropertyType type;
 
   @Column(name = "numberOfGuests", nullable = false)
-  public Integer numberOfGuests;
+  private Integer numberOfGuests;
 
   @Column(name = "thumbnail", nullable = false)
-  public String thumbnailUrl;
+  private String thumbnailUrl;
 
-  @Transient public Integer averageStars;
+  @Transient private Integer averageStars;
 
-  @Transient public List<LocalDate> unvacantDates;
+  @Transient private List<LocalDate> unvacantDates;
 
   @Column(name = "numberOfBedrooms", nullable = false)
-  public Integer numberOfBedrooms;
+  private Integer numberOfBedrooms;
 
   @Column(name = "numberOfBeds", nullable = false)
-  public Integer numberOfBeds;
+  private Integer numberOfBeds;
 
   @Column(name = "numberOfBathrooms", nullable = false)
-  public Integer numberOfBathrooms;
+  private Integer numberOfBathrooms;
 
   @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-  @Transient public User owner;
+  @Transient private User owner;
 
   @Column(name = "ownerId", nullable = false)
-  public UUID ownerId;
+  private UUID ownerId;
 
   @Column(name = "pricePerNight", nullable = false)
-  public Double pricePerNight;
+  private Double pricePerNight;
+
+  @Transient
+  private List<Review> reviews;
 
   public Listing() {}
 
@@ -98,6 +101,22 @@ public class Listing implements Serializable {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getLongDescription() {
+    return longDescription;
+  }
+
+  public void setLongDescription(String longDescription) {
+    this.longDescription = longDescription;
   }
 
   public String getLocation() {
@@ -124,12 +143,28 @@ public class Listing implements Serializable {
     this.amenities = amenities;
   }
 
+  public CreateListingCommand.PropertyType getType() {
+    return type;
+  }
+
+  public void setType(CreateListingCommand.PropertyType type) {
+    this.type = type;
+  }
+
   public Integer getNumberOfGuests() {
     return numberOfGuests;
   }
 
   public void setNumberOfGuests(Integer numberOfGuests) {
     this.numberOfGuests = numberOfGuests;
+  }
+
+  public String getThumbnailUrl() {
+    return thumbnailUrl;
+  }
+
+  public void setThumbnailUrl(String thumbnailUrl) {
+    this.thumbnailUrl = thumbnailUrl;
   }
 
   public Integer getAverageStars() {
@@ -180,14 +215,6 @@ public class Listing implements Serializable {
     this.owner = owner;
   }
 
-  public Double getPricePerNight() {
-    return pricePerNight;
-  }
-
-  public void setPricePerNight(Double pricePerNight) {
-    this.pricePerNight = pricePerNight;
-  }
-
   public UUID getOwnerId() {
     return ownerId;
   }
@@ -196,35 +223,19 @@ public class Listing implements Serializable {
     this.ownerId = ownerId;
   }
 
-  public String getDescription() {
-    return description;
+  public Double getPricePerNight() {
+    return pricePerNight;
   }
 
-  public String getThumbnailUrl() {
-    return thumbnailUrl;
+  public void setPricePerNight(Double pricePerNight) {
+    this.pricePerNight = pricePerNight;
   }
 
-  public void setThumbnailUrl(String thumbnailUrl) {
-    this.thumbnailUrl = thumbnailUrl;
+  public List<Review> getReviews() {
+    return reviews;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public String getLongDescription() {
-    return longDescription;
-  }
-
-  public void setLongDescription(String longDescription) {
-    this.longDescription = longDescription;
-  }
-
-  public CreateListingCommand.PropertyType getType() {
-    return type;
-  }
-
-  public void setType(CreateListingCommand.PropertyType type) {
-    this.type = type;
+  public void setReviews(List<Review> reviews) {
+    this.reviews = reviews;
   }
 }

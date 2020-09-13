@@ -5,6 +5,7 @@ import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
 import Search from './pages/Search/Search';
 import Listing from './pages/Listing/Listing';
+import Review from './pages/Review/Review';
 
 interface Props { }
 
@@ -17,7 +18,7 @@ const Routes: React.FC<Props> = (props) => {
           <Route component={Home} exact path="/home" />
           <Route component={Search} exact path="/search" />
           <Route component={Listing} exact path="/listing/:listingId" />
-          <Route component={undefined} exact path="/profile/reviews"  />
+          <Route component={Review} exact path="/profile/reviews"  />
         </Route>
       </Switch>
     </Route>

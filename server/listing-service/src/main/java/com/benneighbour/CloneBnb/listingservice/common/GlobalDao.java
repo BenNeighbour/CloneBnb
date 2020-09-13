@@ -3,6 +3,7 @@ package com.benneighbour.CloneBnb.listingservice.common;
 import com.benneighbour.CloneBnb.listingservice.dao.ListingDao;
 import com.benneighbour.CloneBnb.listingservice.dao.StayDao;
 import com.benneighbour.CloneBnb.listingservice.model.Listing;
+import com.benneighbour.CloneBnb.listingservice.model.Review;
 import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
@@ -98,7 +99,16 @@ public class GlobalDao {
                   .mapToObj(i -> stay.getCheckInDate().plusDays(i))
                   .collect(Collectors.toList());
 
+          User reviewer = this.getOwnerById(stay.getUserId());
+          reviewer.setPhoneNumber(null);
+
+          Review review = stay.getReview();
+          review.setReviewer(reviewer);
+
           listing.getUnvacantDates().addAll(datesBetween);
+
+          listing.setReviews(new ArrayList<>());
+          listing.getReviews().add(review);
         });
   }
 }

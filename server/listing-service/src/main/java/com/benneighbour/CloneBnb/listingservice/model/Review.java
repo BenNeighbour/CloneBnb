@@ -1,6 +1,10 @@
 package com.benneighbour.CloneBnb.listingservice.model;
 
+import com.benneighbour.CloneBnb.listingservice.common.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -19,6 +23,8 @@ import java.util.UUID;
 @Entity
 @NoArgsConstructor
 @Table(name = "Review")
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_EMPTY)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Review implements Serializable {
 
   private static final long serialVersionUID = 425360301873542089L;
@@ -35,10 +41,11 @@ public class Review implements Serializable {
   @Column(name = "comment")
   private String comment;
 
+  @JsonIgnore
   @Column(name = "reviewerId")
   private UUID reviewerId;
 
-  @Column(name = "listingId")
-  private UUID listingId;
+  @Transient
+  private User reviewer;
 }
 
