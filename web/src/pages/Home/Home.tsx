@@ -7,6 +7,8 @@ import HomeTopBanner from "./../../components/Home/HomeTopBanner";
 interface Props extends RouteComponentProps<any> {}
 
 const Home: React.FC<Props> = (props) => {
+  const [isLoading, setLoading]: any = React.useState(true);
+
   return (
     <div
       style={{

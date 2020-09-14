@@ -6,16 +6,19 @@ import Grid from "@material-ui/core/Grid";
 import BookingCard from "./../../components/Listing/BookingCard";
 import MainSection from "./../../components/Listing/MainSection";
 import { LISTING_PAGE } from "./../../util/api/AJAX";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 interface Props extends RouteComponentProps<any> {}
 
 const Listing: React.FC<Props> = (props) => {
   const [listing, setListing]: any = React.useState({});
+  const [isLoading, setLoading]: any = React.useState(true);
 
   React.useEffect(() => {
     // Make a request to get the listing by that id
     LISTING_PAGE(props.match.params.listingId)
       .then((response: any) => {
+        setLoading(false);
         setListing(response.data);
       })
       .catch((error: any) => {
@@ -43,67 +46,78 @@ const Listing: React.FC<Props> = (props) => {
           paddingRight: "7vw",
         }}
       >
-        {/* Layout here */}
-        <div
-          style={{
-            display: "inline-block",
-          }}
-        >
-          {/* Top Section here */}
+        {!isLoading ? (
           <div
             style={{
-              paddingBottom: "3vh",
+              display: "inline-block",
             }}
           >
-            <img
+            <div
               style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-                objectFit: "cover",
-                objectPosition: "100% 0",
-                borderRadius: "10px",
-              }}
-              alt=""
-              src="https://a0.muscache.com/im/pictures/2bda3dae-6ddc-4215-8728-c76c62bebc64.jpg?aki_policy=xx_large"
-            />
-          </div>
-
-          <Grid
-            container
-            direction="row"
-            alignItems="stretch"
-            spacing={9}
-            style={{
-              margin: "none",
-            }}
-          >
-            <Grid
-              item
-              xs={12}
-              sm={7}
-              style={{
-                position: "relative",
-                paddingBottom: 0,
+                paddingBottom: "3vh",
               }}
             >
-              {listing !== undefined ? (
-                <MainSection
-                  location={props.location}
-                  match={props.match}
-                  history={props.history}
-                  listing={listing}
-                />
-              ) : undefined}
-            </Grid>
-            <Grid item xs={12} sm={5} className="stickyCard">
-              <BookingCard
-                location={props.location}
-                history={props.history}
-                match={props.match}
+              <img
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  objectFit: "cover",
+                  objectPosition: "100% 0",
+                  borderRadius: "10px",
+                }}
+                alt=""
+                src="https://a0.muscache.com/im/pictures/2bda3dae-6ddc-4215-8728-c76c62bebc64.jpg?aki_policy=xx_large"
               />
+            </div>
+
+            <Grid
+              container
+              direction="row"
+              alignItems="stretch"
+              spacing={9}
+              style={{
+                margin: "none",
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                sm={7}
+                style={{
+                  position: "relative",
+                  paddingBottom: 0,
+                }}
+              >
+                {listing !== undefined ? (
+                  <MainSection
+                    location={props.location}
+                    match={props.match}
+                    history={props.history}
+                    listing={listing}
+                  />
+                ) : undefined}
+              </Grid>
+              <Grid item xs={12} sm={5} className="stickyCard">
+                <BookingCard
+                  location={props.location}
+                  history={props.history}
+                  match={props.match}
+                />
+              </Grid>
             </Grid>
-          </Grid>
-        </div>
+          </div>
+        ) : (
+          <div
+            style={{
+              placeItems: "center",
+              textAlign: "center",
+              display: "inline-block",
+              width: "94%",
+            }}
+          >
+            <CircularProgress />
+          </div>
+        )}
       </Container>
     </div>
   );
