@@ -103,7 +103,7 @@ public class GlobalDao {
           reviewer.setPhoneNumber(null);
 
           Review review = stay.getReview();
-          review.setReviewer(reviewer);
+          if (review != null) review.setReviewer(reviewer);
 
           listing.getUnvacantDates().addAll(datesBetween);
 

@@ -13,7 +13,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 /**
  * @author Ben Neighbour
@@ -32,7 +35,10 @@ public class ListingServiceImpl implements ListingService {
   private final ReviewDao reviewDao;
 
   public ListingServiceImpl(
-      final ListingDao dao, final CommandGateway gateway, final StayDao stayDao, final ReviewDao reviewDao) {
+      final ListingDao dao,
+      final CommandGateway gateway,
+      final StayDao stayDao,
+      final ReviewDao reviewDao) {
     this.dao = dao;
     this.gateway = gateway;
     this.stayDao = stayDao;
@@ -69,5 +75,16 @@ public class ListingServiceImpl implements ListingService {
   @Override
   public ResponseEntity<Review> postReview(Review review) {
     return ResponseEntity.ok(reviewDao.save(review));
+  }
+
+  @Override
+  public ResponseEntity<List<Stay>> getUnreviewedStays(UUID userId) {
+    List<Stay> stays = stayDao.findAllStaysByUserId(userId);
+    stays =
+        stays.stream()
+            .filter(stay -> stay.getReview() == null)
+            .collect(Collectors.toList());
+
+    return ResponseEntity.ok(stays);
   }
 }

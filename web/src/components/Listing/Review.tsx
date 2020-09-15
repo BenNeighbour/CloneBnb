@@ -11,35 +11,39 @@ interface Props extends RouteComponentProps<any> {
 }
 
 const Review: React.FC<Props> = (props) => {
-  return (
-    <Grid item xs={12}>
-      <Card
-        style={{
-          boxShadow: "none",
-        }}
-      >
-        <CardHeader
-          avatar={<Avatar style={{
-            padding: 0,
-            margin: 0
-          }}>R</Avatar>}
-          title={props.review.reviewer.username}
-          subheader={`${props.review.stars} stars`}
-          action={null}
-        />
-        <CardContent
+  if (props.review !== null) {
+    return (
+      <Grid item xs={12}>
+        <Card
           style={{
-            paddingTop: 0,
-            marginTop: 0,
+            boxShadow: "none",
           }}
         >
-          <p>
-            {props.review.comment}
-          </p>
-        </CardContent>
-      </Card>
-    </Grid>
-  );
+          <CardHeader
+            avatar={<Avatar style={{
+              padding: 0,
+              margin: 0
+            }}>R</Avatar>}
+            title={props.review.reviewer.username}
+            subheader={`${props.review.stars} stars`}
+            action={null}
+          />
+          <CardContent
+            style={{
+              paddingTop: 0,
+              marginTop: 0,
+            }}
+          >
+            <p>
+              {props.review.comment}
+            </p>
+          </CardContent>
+        </Card>
+      </Grid>
+    );
+  } 
+
+  return null;
 };
 
 export default Review;

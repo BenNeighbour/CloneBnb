@@ -1,14 +1,14 @@
 package com.benneighbour.CloneBnb.listingservice.controller;
 
 import com.benneighbour.CloneBnb.listingservice.model.Review;
+import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import com.benneighbour.CloneBnb.listingservice.service.ListingService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * @author Ben Neighbour
@@ -28,5 +28,10 @@ public class ReviewController {
   @PostMapping("listing/review/save/")
   public ResponseEntity<Review> saveReview(@Valid @RequestBody Review review) {
     return service.postReview(review);
+  }
+
+  @GetMapping("listing/review/unreviewed/{id}")
+  public ResponseEntity<List<Stay>> getUnreviewedStays(@PathVariable("id") UUID userId) {
+    return service.getUnreviewedStays(userId);
   }
 }

@@ -7,6 +7,8 @@ import com.benneighbour.CloneBnb.listingservice.model.Stay;
 import org.springframework.http.ResponseEntity;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
 /**
@@ -23,5 +25,7 @@ public interface ListingService {
     Stay createStay(Stay stay);
 
     ResponseEntity<Review> postReview(Review review);
+
+    ResponseEntity<List<Stay>> getUnreviewedStays(UUID userId);
 
 }
