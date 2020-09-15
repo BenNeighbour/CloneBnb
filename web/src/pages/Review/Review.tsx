@@ -5,11 +5,24 @@ import { Container } from "@material-ui/core";
 import "./Review.css";
 import ReviewOptions from "./../../components/Review/ReviewOptions";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { REVIEWER_PAGE } from "../../util/api/AJAX";
 
 interface Props extends RouteComponentProps<any> {}
 
 const Review: React.FC<Props> = (props) => {
+  const [staysToBeReviewed, setStaysToBeReviewed]: any = React.useState([]);
   const [isLoading, setLoading]: any = React.useState(true);
+
+  React.useEffect(() => {
+    REVIEWER_PAGE()
+      .then((response: any) => {
+        setLoading(false);
+        setStaysToBeReviewed(response.data);
+      })
+      .catch((error: any) => {
+        
+      });
+  }, []);
 
   return (
     <div
@@ -39,6 +52,7 @@ const Review: React.FC<Props> = (props) => {
               history={props.history}
               match={props.match}
               location={props.location}
+              staysToBeReviewed={staysToBeReviewed}
             />
           </>
         ) : (
