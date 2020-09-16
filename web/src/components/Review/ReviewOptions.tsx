@@ -5,12 +5,16 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import "./Review.css";
 import Divider from "@material-ui/core/Divider";
+import CreateReviewModal from "./CreateReviewModal";
 
 interface Props extends RouteComponentProps<any> {
   staysToBeReviewed: any;
 }
 
 const ReviewOptions: React.FC<Props> = (props) => {
+  const [isCreatingReview, setIsCreatingReview]: any = React.useState(false);
+  const [reviewingListingName, setListingName]: any = React.useState(null);
+
   return (
     <div>
       <Card
@@ -45,25 +49,42 @@ const ReviewOptions: React.FC<Props> = (props) => {
 
           {props.staysToBeReviewed !== undefined || [] ? (
             props.staysToBeReviewed.map((stay: any, index: number) => (
-              <>
+              <div key={index}>
                 <div
                   className="stayBtn"
                   style={{
                     cursor: "pointer",
+                    overflow: "hidden",
+                    verticalAlign: "center",
                   }}
-                  key={index}
+                  onClick={() => {
+                    setListingName(stay.listing.name);
+                    setIsCreatingReview(true)
+                  }}
                 >
                   <p
                     style={{
                       padding: "20px",
                       color: "#484848",
+                      float: "left",
                     }}
                   >
                     {stay.listing.name}
                   </p>
+                  <p
+                    style={{
+                      padding: "20px",
+                      color: "#484848",
+                      fontSize: "smaller",
+                      float: "right",
+                    }}
+                  >
+                    {new Date(stay.checkInDate).toDateString()} to{" "}
+                    {new Date(stay.checkOutDate).toDateString()}
+                  </p>
                 </div>
                 <Divider />
-              </>
+              </div>
             ))
           ) : (
             <p
@@ -79,6 +100,22 @@ const ReviewOptions: React.FC<Props> = (props) => {
           )}
         </CardContent>
       </Card>
+
+      {isCreatingReview ? (
+        <CreateReviewModal
+          history={props.history}
+          match={props.match}
+          location={props.location}
+          listingName={reviewingListingName}
+          handleClose={() => {
+            console.log("close");
+            setIsCreatingReview(false);
+          }}
+          handleSubmit={() => {
+            
+          }}
+        />
+      ) : undefined}
     </div>
   );
 };
