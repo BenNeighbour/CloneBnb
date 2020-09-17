@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import "./Review.css";
 import Divider from "@material-ui/core/Divider";
 import CreateReviewModal from "./CreateReviewModal";
+import { REVIEWER_SUBMIT } from "./../../util/api/AJAX";
 
 interface Props extends RouteComponentProps<any> {
   staysToBeReviewed: any;
@@ -13,7 +14,7 @@ interface Props extends RouteComponentProps<any> {
 
 const ReviewOptions: React.FC<Props> = (props) => {
   const [isCreatingReview, setIsCreatingReview]: any = React.useState(false);
-  const [reviewingListingName, setListingName]: any = React.useState(null);
+  const [reviewingStay, setStay]: any = React.useState(null);
 
   return (
     <div>
@@ -58,8 +59,8 @@ const ReviewOptions: React.FC<Props> = (props) => {
                     verticalAlign: "center",
                   }}
                   onClick={() => {
-                    setListingName(stay.listing.name);
-                    setIsCreatingReview(true)
+                    setStay(stay);
+                    setIsCreatingReview(true);
                   }}
                 >
                   <p
@@ -106,13 +107,19 @@ const ReviewOptions: React.FC<Props> = (props) => {
           history={props.history}
           match={props.match}
           location={props.location}
-          listingName={reviewingListingName}
+          listingName={reviewingStay.listing.name}
           handleClose={() => {
             console.log("close");
             setIsCreatingReview(false);
           }}
           handleSubmit={(rating: number, description: string) => {
             // Call AJAX Method
+            REVIEWER_SUBMIT(reviewingStay.stayId, rating, description).then((response: any) => {
+              if (response.status === 200) {
+                setIsCreatingReview(false);
+                window.location.reload();
+              }
+            });
           }}
         />
       ) : undefined}

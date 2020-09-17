@@ -48,3 +48,16 @@ export function REVIEWER_PAGE(): any {
     extraRequestHeaders
   );
 }
+
+export function REVIEWER_SUBMIT(stayId: string, stars: number, description: string): any {
+  return axios.post(
+    `${Constants.SERVER_BASE_ROUTE}/listing/review/save/`,
+    {
+      "stayId": stayId,
+      "stars": stars,
+      "comment": description,
+      "reviewerId": `${localStorage.getItem("uid")}`
+    },
+    extraRequestHeaders
+  );
+}

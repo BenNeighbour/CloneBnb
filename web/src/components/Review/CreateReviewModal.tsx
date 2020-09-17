@@ -22,7 +22,6 @@ const CreateReviewModal: React.FC<Props> = (props) => {
   const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [currentRating, setCurrentRating]: any = React.useState(1);
-  console.log(currentRating)
 
   return (
     <Dialog

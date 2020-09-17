@@ -1,7 +1,6 @@
 package com.benneighbour.CloneBnb.listingservice.model;
 
 import com.benneighbour.CloneBnb.listingservice.common.User;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -32,7 +31,7 @@ public class Review implements Serializable {
   @Id
   @GeneratedValue
   @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-  @Column(columnDefinition = "uuid", updatable = false)
+  @Column(columnDefinition = "uuid", updatable = false, name = "id")
   private UUID reviewId;
 
   @Column(name = "stars")
@@ -41,11 +40,11 @@ public class Review implements Serializable {
   @Column(name = "comment")
   private String comment;
 
-  @JsonIgnore
+  @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
   @Column(name = "reviewerId")
   private UUID reviewerId;
 
-  @Transient
-  private User reviewer;
-}
+  @Transient private User reviewer;
 
+  @Transient private UUID stayId;
+}

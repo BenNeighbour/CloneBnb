@@ -23,8 +23,6 @@ public class Review implements Serializable {
 
   private UUID reviewerId;
 
-  private UUID listingId;
-
   public Review() {}
 
   public UUID getId() {

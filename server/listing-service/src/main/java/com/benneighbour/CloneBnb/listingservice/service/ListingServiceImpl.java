@@ -74,16 +74,19 @@ public class ListingServiceImpl implements ListingService {
 
   @Override
   public ResponseEntity<Review> postReview(Review review) {
-    return ResponseEntity.ok(reviewDao.save(review));
+    Stay stay = stayDao.findStayByStayId(review.getStayId());
+    Review savedReview = reviewDao.save(review);
+
+    stay.setReview(savedReview);
+    stayDao.saveAndFlush(stay);
+
+    return ResponseEntity.ok(savedReview);
   }
 
   @Override
   public ResponseEntity<List<Stay>> getUnreviewedStays(UUID userId) {
     List<Stay> stays = stayDao.findAllStaysByUserId(userId);
-    stays =
-        stays.stream()
-            .filter(stay -> stay.getReview() == null)
-            .collect(Collectors.toList());
+    stays = stays.stream().filter(stay -> stay.getReview() == null).collect(Collectors.toList());
 
     return ResponseEntity.ok(stays);
   }

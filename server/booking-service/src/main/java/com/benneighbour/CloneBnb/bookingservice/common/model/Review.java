@@ -31,6 +31,4 @@ public class Review implements Serializable {
 
   private UUID reviewerId;
 
-  private UUID listingId;
-
 }

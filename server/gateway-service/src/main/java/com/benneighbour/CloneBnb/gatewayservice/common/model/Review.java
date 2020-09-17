@@ -24,8 +24,6 @@ public class Review implements Serializable {
 
   private UUID reviewerId;
 
-  private UUID listingId;
-
   public Review() {}
 
   public UUID getId() {
@@ -58,13 +56,5 @@ public class Review implements Serializable {
 
   public void setReviewerId(UUID reviewerId) {
     this.reviewerId = reviewerId;
-  }
-
-  public UUID getListingId() {
-    return listingId;
-  }
-
-  public void setListingId(UUID listingId) {
-    this.listingId = listingId;
   }
 }
