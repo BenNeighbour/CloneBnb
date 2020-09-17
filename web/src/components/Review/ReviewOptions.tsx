@@ -111,8 +111,8 @@ const ReviewOptions: React.FC<Props> = (props) => {
             console.log("close");
             setIsCreatingReview(false);
           }}
-          handleSubmit={() => {
-            
+          handleSubmit={(rating: number, description: string) => {
+            // Call AJAX Method
           }}
         />
       ) : undefined}
