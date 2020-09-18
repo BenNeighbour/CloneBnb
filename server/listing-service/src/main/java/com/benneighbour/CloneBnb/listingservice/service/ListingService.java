@@ -20,7 +20,7 @@ public interface ListingService {
 
     CompletableFuture<Listing> createListing(Listing listing);
 
-    Listing saveListingFromCommand(CreateListingCommand command) throws IllegalAccessException, InvocationTargetException, Exception;
+    Listing saveListingFromCommand(CreateListingCommand command) throws Exception;
 
     Stay createStay(Stay stay);
 

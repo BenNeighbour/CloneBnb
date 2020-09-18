@@ -12,7 +12,6 @@ import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
@@ -60,7 +59,7 @@ public class ListingServiceImpl implements ListingService {
 
   @Override
   public Listing saveListingFromCommand(CreateListingCommand command)
-      throws IllegalAccessException, InvocationTargetException, Exception {
+      throws Exception {
     Listing listing = new Listing();
     BeanUtils.copyProperties(listing, command);
 

@@ -6,10 +6,13 @@ import "./MainSection.css";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 import BookingCardForm from "./BookingCardForm";
+import BookModal from "./../Booking/BookModal";
 
 interface Props extends RouteComponentProps<any> {}
 
 const BookingCard: React.FC<Props> = (props) => {
+  const [isBooking, setBooking]: any = React.useState(false);
+
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <div className="stickyCard">
@@ -34,7 +37,8 @@ const BookingCard: React.FC<Props> = (props) => {
             <br />
             <BookingCardForm
               onSubmit={(formValues) => {
-                console.log(formValues)
+                // TODO: Make AJAX call to server to verify that the parameters can be fulfilled
+                setBooking(true);
               }}
               errors=""
               location={props.location}
@@ -43,6 +47,19 @@ const BookingCard: React.FC<Props> = (props) => {
             />
           </CardContent>
         </Card>
+        {isBooking ? (
+          <BookModal
+            history={props.history}
+            location={props.location}
+            match={props.match}
+            handleClose={() => {
+              setBooking(false);
+            }}
+            handleSubmit={() => {
+              // Make AJAX call to the API gateway and start the booking saga
+            }}
+          />
+        ) : undefined}
       </div>
     </MuiPickersUtilsProvider>
   );
