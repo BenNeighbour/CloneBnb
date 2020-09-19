@@ -24,7 +24,7 @@ export async function USER_LOGIN(formObject: any): Promise<any> {
     .then((response: any) => {
       localStorage.setItem("uid", response.data.id);
     });
-  
+
   return res;
 }
 
@@ -44,19 +44,42 @@ export function LISTING_PAGE(listingId: string): any {
 
 export function REVIEWER_PAGE(): any {
   return axios.get(
-    `${Constants.SERVER_BASE_ROUTE}/listing/review/unreviewed/${localStorage.getItem("uid")}/`,
+    `${
+      Constants.SERVER_BASE_ROUTE
+    }/listing/review/unreviewed/${localStorage.getItem("uid")}/`,
     extraRequestHeaders
   );
 }
 
-export function REVIEWER_SUBMIT(stayId: string, stars: number, description: string): any {
+export function REVIEWER_SUBMIT(
+  stayId: string,
+  stars: number,
+  description: string
+): any {
   return axios.post(
     `${Constants.SERVER_BASE_ROUTE}/listing/review/save/`,
     {
-      "stayId": stayId,
-      "stars": stars,
-      "comment": description,
-      "reviewerId": `${localStorage.getItem("uid")}`
+      stayId: stayId,
+      stars: stars,
+      comment: description,
+      reviewerId: `${localStorage.getItem("uid")}`
+    },
+    extraRequestHeaders
+  );
+}
+
+export function BOOKING_BOOK(
+  listingId: string,
+  checkInDate: Date,
+  checkOutDate: Date
+): any {
+  return axios.post(
+    `${Constants.SERVER_BASE_ROUTE}/booking/book/`,
+    {
+      listingId: listingId,
+      userId: `${localStorage.getItem("uid")}`,
+      checkInDate: checkInDate,
+      checkOutDate: checkOutDate
     },
     extraRequestHeaders
   );

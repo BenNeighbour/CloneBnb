@@ -10,7 +10,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 interface Props extends RouteComponentProps<any> {
   handleClose(): void;
-  handleSubmit(rating: number, description: string): void;
+  handleSubmit(): void;
   // Pass in the already validated form values
 }
 
@@ -25,7 +25,7 @@ const BookModal: React.FC<Props> = (props) => {
       onClose={props.handleClose}
       aria-labelledby="responsive-dialog-title"
     >
-      <DialogTitle id="responsive-dialog-title">Create review for</DialogTitle>
+      <DialogTitle id="responsive-dialog-title">Book a stay</DialogTitle>
       <DialogContent
         style={{
           overflow: "hidden",
@@ -36,7 +36,9 @@ const BookModal: React.FC<Props> = (props) => {
             minWidth: "40vw",
             overflow: "hidden",
           }}
-        ></div>
+        >
+          Are you sure you would like to reserve this stay?
+        </div>
       </DialogContent>
       <DialogActions>
         <Button
@@ -47,7 +49,15 @@ const BookModal: React.FC<Props> = (props) => {
         >
           Cancel
         </Button>
-        <Button type="submit" color="primary" variant="outlined" autoFocus>
+        <Button
+          onClick={() => {
+            props.handleSubmit();
+          }}
+          type="submit"
+          color="primary"
+          variant="outlined"
+          autoFocus
+        >
           Book Stay
         </Button>
       </DialogActions>

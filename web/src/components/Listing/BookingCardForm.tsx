@@ -1,14 +1,12 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
 import { KeyboardDatePicker } from "@material-ui/pickers";
 import { Formik } from "formik";
 import { Form } from "formik";
 import Button from "@material-ui/core/Button";
 
 interface FormValues {
-  guests: number;
   checkInDate: Date;
   checkOutDate: Date;
 }
@@ -26,7 +24,6 @@ const BookingCardForm: React.FC<Props> = (props) => {
           props.onSubmit(formValues);
         }}
         initialValues={{
-          guests: 1,
           checkInDate: new Date(),
           checkOutDate: new Date(),
         }}
@@ -65,15 +62,6 @@ const BookingCardForm: React.FC<Props> = (props) => {
                 format="dd/MM/yy"
                 margin="none"
                 name="checkOutDate"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="Guests"
-                variant="outlined"
-                onChange={handleChange}
-                value={values.guests}
-                fullWidth
               />
             </Grid>
             <Grid
