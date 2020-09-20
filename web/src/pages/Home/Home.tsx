@@ -3,6 +3,7 @@ import { RouteComponentProps } from "react-router-dom";
 import Navigation from "./../../components/Navigation/Navigation";
 import "./Home.css";
 import HomeTopBanner from "./../../components/Home/HomeTopBanner";
+import MiddleSection from "./../../components/Home/MiddleSection";
 
 interface Props extends RouteComponentProps<any> {}
 
@@ -33,11 +34,11 @@ const Home: React.FC<Props> = (props) => {
           history={props.history}
         />
         <div>
-          next section
-          <br />
-          <br />
-          <br />
-          fdsf
+          <MiddleSection
+            location={props.location}
+            match={props.match}
+            history={props.history}
+          />
         </div>
       </div>
     </div>
