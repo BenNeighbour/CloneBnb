@@ -1,6 +1,6 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import { Formik, Form } from "formik";
+import { Formik, Form, Field } from "formik";
 import Button from "@material-ui/core/Button";
 import { KeyboardDatePicker } from "@material-ui/pickers";
 import TextField from "@material-ui/core/TextField";
@@ -29,9 +29,11 @@ const SearchBarForm: React.FC<Props> = (props) => {
       }}
     >
       {({ values, handleChange }) => (
-        <Form style={{
-          display: "contents"
-        }}>
+        <Form
+          style={{
+            display: "contents",
+          }}
+        >
           <div
             style={{
               paddingTop: "0.5vh",
@@ -50,7 +52,6 @@ const SearchBarForm: React.FC<Props> = (props) => {
               name="location"
             />
           </div>
-
           <div
             style={{
               paddingTop: "0.5vh",
@@ -58,19 +59,7 @@ const SearchBarForm: React.FC<Props> = (props) => {
               paddingRight: "1vw",
             }}
           >
-            <KeyboardDatePicker
-              style={{
-                overflowY: "hidden",
-              }}
-              value={values.checkInDate}
-              label="Check in"
-              focused
-              fullWidth
-              format="dd/MM/yy"
-              margin="none"
-              name="checkInDate"
-              onChange={handleChange}
-            />
+            <Field name="checkInDate" label="Check-in" component={DatePickerField} />
           </div>
 
           <div
@@ -80,19 +69,7 @@ const SearchBarForm: React.FC<Props> = (props) => {
               paddingRight: "1vw",
             }}
           >
-            <KeyboardDatePicker
-              style={{
-                overflowY: "hidden",
-              }}
-              value={values.checkOutDate}
-              label="Check out"
-              focused
-              name="checkOutDate"
-              fullWidth
-              format="dd/MM/yy"
-              margin="none"
-              onChange={handleChange}
-            />
+            <Field name="checkOutDate" label="Check-out" component={DatePickerField} />
           </div>
 
           <div
@@ -123,6 +100,33 @@ const SearchBarForm: React.FC<Props> = (props) => {
         </Form>
       )}
     </Formik>
+  );
+};
+
+const DatePickerField = ({ field, form, ...other }) => {
+  const currentError = form.errors[field.name];
+
+  return (
+    <KeyboardDatePicker
+      style={{
+        overflowY: "hidden",
+      }}
+      disablePast
+      name={field.name}
+      value={field.value}
+      format="dd/MM/yyyy"
+      focused
+      fullWidth
+      helperText={currentError}
+      error={Boolean(currentError)}
+      onError={(error) => {
+        if (error !== currentError) {
+          form.setFieldError(field.name, error);
+        }
+      }}
+      onChange={(date) => form.setFieldValue(field.name, date, false)}
+      {...other}
+    />
   );
 };
 

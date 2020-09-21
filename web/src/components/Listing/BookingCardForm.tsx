@@ -2,8 +2,7 @@ import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import { KeyboardDatePicker } from "@material-ui/pickers";
-import { Formik } from "formik";
-import { Form } from "formik";
+import { Formik, Form, Field } from "formik";
 import Button from "@material-ui/core/Button";
 
 interface FormValues {
@@ -35,34 +34,10 @@ const BookingCardForm: React.FC<Props> = (props) => {
             }}
           >
             <Grid item xs={12} sm={6}>
-              <KeyboardDatePicker
-                value={values.checkInDate}
-                onChange={handleChange}
-                inputVariant="outlined"
-                style={{
-                  overflowY: "hidden",
-                }}
-                label="Check in"
-                fullWidth
-                format="dd/MM/yy"
-                margin="none"
-                name="checkInDate"
-              />
+              <Field name="checkOutDate" label="Check-out" component={DatePickerField} />>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <KeyboardDatePicker
-                value={values.checkOutDate}
-                inputVariant="outlined"
-                onChange={handleChange}
-                style={{
-                  overflowY: "hidden",
-                }}
-                label="Check out"
-                fullWidth
-                format="dd/MM/yy"
-                margin="none"
-                name="checkOutDate"
-              />
+              <Field name="checkOutDate" label="Check-out" component={DatePickerField} />
             </Grid>
             <Grid
               item
@@ -90,6 +65,33 @@ const BookingCardForm: React.FC<Props> = (props) => {
         )}
       </Formik>
     </Grid>
+  );
+};
+
+const DatePickerField = ({ field, form, ...other }) => {
+  const currentError = form.errors[field.name];
+
+  return (
+    <KeyboardDatePicker
+      style={{
+        overflowY: "hidden",
+      }}
+      disablePast
+      name={field.name}
+      value={field.value}
+      format="dd/MM/yyyy"
+      focused
+      fullWidth
+      helperText={currentError}
+      error={Boolean(currentError)}
+      onError={(error) => {
+        if (error !== currentError) {
+          form.setFieldError(field.name, error);
+        }
+      }}
+      onChange={(date) => form.setFieldValue(field.name, date, false)}
+      {...other}
+    />
   );
 };
 
