@@ -36,10 +36,6 @@ const MainSection: React.FC<Props> = (props) => {
         <br />
         <Divider />
         <br />
-        Amenities Section Here
-        <br />
-        <Divider />
-        <br />
         <Grid
           container
           style={{
