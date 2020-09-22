@@ -10,7 +10,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -50,9 +51,6 @@ public class ListingController {
       @RequestParam("checkIn") String checkIn,
       @RequestParam("checkOut") String checkOut) {
 
-    LocalDate checkInDate = LocalDate.parse(checkIn);
-    LocalDate checkOutDate = LocalDate.parse(checkOut);
-
     ListingSpecificationBuilder builder = new ListingSpecificationBuilder();
 
     String operationSetExper = Joiner.on("|").join(SearchOperation.SIMPLE_OPERATION_SET);
@@ -69,7 +67,10 @@ public class ListingController {
         dao.findAllListings(specification).stream()
             .filter(
                 listing ->
-                    this.isWithinRange(checkInDate, checkOutDate, listing.getUnvacantDates()))
+                        (checkIn).equals("") || (checkOut).equals("") || this.isWithinRange(
+                                LocalDate.parse(checkIn),
+                                LocalDate.parse(checkOut),
+                                listing.getUnvacantDates()))
             .collect(Collectors.toList());
 
     compatibleListings.forEach(listing -> listing.setUnvacantDates(null));

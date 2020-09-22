@@ -22,27 +22,21 @@ const MiddleSection: React.FC<Props> = (props) => {
             history={props.history}
             match={props.match}
             title="Entire Homes"
-            description="This impressive paella is a perfect party dish and a fun meal
-                  to cook together with your guests. Add 1 cup of frozen peas
-                  along with the mussels, if you like"
+            description="Comfortable private places, with room for friends or family.e"
           />
           <AdvertCard
             location={props.location}
             history={props.history}
             match={props.match}
             title="Entire Homes"
-            description="This impressive paella is a perfect party dish and a fun meal
-                  to cook together with your guests. Add 1 cup of frozen peas
-                  along with the mussels, if you like"
+            description="Comfortable private places, with room for friends or family."
           />
           <AdvertCard
             location={props.location}
             history={props.history}
             match={props.match}
             title="Entire Homes"
-            description="This impressive paella is a perfect party dish and a fun meal
-                  to cook together with your guests. Add 1 cup of frozen peas
-                  along with the mussels, if you like"
+            description="Comfortable private places, with room for friends or family."
           />
         </Grid>
       </Container>

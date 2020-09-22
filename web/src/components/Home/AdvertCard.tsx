@@ -18,26 +18,31 @@ const AdvertCard: React.FC<Props> = (props) => {
       sm={4}
       style={{
         paddingLeft: "1vw",
+        overflowX: "hidden"
       }}
     >
       <Card
         style={{
           minHeight: "25vh",
+          maxWidth: "90vw",
           marginRight: "1vw",
           marginTop: "1vh",
           boxShadow: "rgba(0, 0, 0, 0.15) 0px 2px 8px",
           borderRadius: "17px",
           cursor: "pointer",
-          paddingBottom: 0
+          paddingBottom: 0,
         }}
       >
-        <div>
+        <div style={{
+          overflow: "hidden",
+          maxHeight: "30vh"
+        }}>
           <img
             style={{
-              maxHeight: "20vh",
+              width: "auto",
               marginBottom: 0,
               border: "none",
-              outline: "none",
+              outline: "none"
             }}
             alt=""
             src="https://a0.muscache.com/im/pictures/fdb46962-10c1-45fc-a228-d0b055411448.jpg"

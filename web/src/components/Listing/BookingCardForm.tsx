@@ -34,7 +34,7 @@ const BookingCardForm: React.FC<Props> = (props) => {
             }}
           >
             <Grid item xs={12} sm={6}>
-              <Field name="checkOutDate" label="Check-out" component={DatePickerField} />>
+              <Field name="checkInDate" label="Check-in " component={DatePickerField} />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Field name="checkOutDate" label="Check-out" component={DatePickerField} />

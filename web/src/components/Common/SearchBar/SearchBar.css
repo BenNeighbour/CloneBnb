@@ -1,0 +1,6 @@
+.search {
+  display: grid !important;
+  border-radius: 32px !important;
+  max-width: 70vw !important;
+  min-height: 7vh !important;
+}
